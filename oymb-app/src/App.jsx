@@ -23,15 +23,15 @@ button{font-family:'Jost',sans-serif;font-weight:300}
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 const MORNING = [
   {id:"m1",emoji:"💧",title:"Mineraalwater",desc:"Groot glas water + citroen + Keltisch zeezout",time:"2 min"},
-  {id:"m2",emoji:"🌬",title:"3-6 Ademhaling",desc:"10 ronden — nervus vagus activeren",time:"3 min"},
+  {id:"m2",emoji:"🌬",title:"3-6 Ademhaling",desc:"10 ronden -- nervus vagus activeren",time:"3 min"},
   {id:"m3",emoji:"🌿",title:"Lichaamsscan",desc:"Waar voel ik spanning? Wat heeft mijn lichaam nodig?",time:"3 min"},
-  {id:"m4",emoji:"🎵",title:"Hummen",desc:"2 minuten — nervus vagus stimuleren via stembanden",time:"2 min"},
+  {id:"m4",emoji:"🎵",title:"Hummen",desc:"2 minuten -- nervus vagus stimuleren via stembanden",time:"2 min"},
   {id:"m5",emoji:"🥚",title:"Eiwitrijk ontbijt",desc:"Minimaal 25-30 gram eiwit als basis voor de dag",time:"15 min"},
   {id:"m6",emoji:"✨",title:"Intentie",desc:"Wat heeft mijn lichaam vandaag nodig?",time:"2 min"},
 ];
 
 const MIDDAY = [
-  {id:"d1",emoji:"💧",title:"Glas water drinken",desc:"Hydrateer — je bent waarschijnlijk uitgedroogd",time:"1 min"},
+  {id:"d1",emoji:"💧",title:"Glas water drinken",desc:"Hydrateer -- je bent waarschijnlijk uitgedroogd",time:"1 min"},
   {id:"d2",emoji:"🚶",title:"Korte beweegpauze",desc:"Sta op, rek jezelf uit, loop even rond",time:"3 min"},
   {id:"d3",emoji:"🌬",title:"5 diepe ademhalingen",desc:"Reset je zenuwstelsel midden op de dag",time:"1 min"},
   {id:"d4",emoji:"☀️",title:"Buiten of bij een raam",desc:"Daglicht reguleert je cortisol en slaap",time:"5 min"},
@@ -40,10 +40,10 @@ const MIDDAY = [
 ];
 
 const EVENING = [
-  {id:"e1",emoji:"📵",title:"Telefoon weg",desc:"Meldingen uit — begin te vertragen",time:"0 min"},
-  {id:"e2",emoji:"🦋",title:"Vlinderhug",desc:"5 minuten — afwisselend links/rechts tikken",time:"5 min"},
+  {id:"e1",emoji:"📵",title:"Telefoon weg",desc:"Meldingen uit -- begin te vertragen",time:"0 min"},
+  {id:"e2",emoji:"🦋",title:"Vlinderhug",desc:"5 minuten -- afwisselend links/rechts tikken",time:"5 min"},
   {id:"e3",emoji:"📓",title:"Journaling",desc:"Wat heeft mijn lichaam vandaag gevoeld?",time:"5 min"},
-  {id:"e4",emoji:"🌊",title:"4-7-8 Ademhaling",desc:"4 rondes — voor diepe ontspanning en slaap",time:"4 min"},
+  {id:"e4",emoji:"🌊",title:"4-7-8 Ademhaling",desc:"4 rondes -- voor diepe ontspanning en slaap",time:"4 min"},
   {id:"e5",emoji:"💆",title:"Lichaam bedanken",desc:"Hand op hart: 'Dankjewel voor vandaag.'",time:"1 min"},
   {id:"e6",emoji:"🌸",title:"Dankbaarheid",desc:"1 ding waarvan mijn lichaam vandaag heeft genoten",time:"2 min"},
 ];
@@ -89,10 +89,10 @@ const MODULES = [
   {id:2,emoji:"🧠",color:T.gold,title:"Begrijp je zenuwstelsel",
    quote:"Je kunt jezelf pas echt helpen als je begrijpt waarom je lichaam doet wat het doet.",
    sections:[
-     {t:"Het beveiligingssysteem",b:"Jouw zenuwstelsel scant de hele dag je omgeving — onbewust. We noemen dit neuroceptie.\n\nJe zenuwstelsel vraagt iedere seconde:\n• Ben ik veilig?\n• Kan ik ontspannen?\n• Is er gevaar?\n\nNog voordat jij erover nadenkt... heeft jouw lichaam al besloten."},
-     {t:"De Groene Stand – Veiligheid",b:"Je ademt rustig, voelt verbinding, kunt helder nadenken en geniet.\n\nJe immuunsysteem werkt optimaal. Je hormonen zijn meer in balans. Je lichaam kan herstellen.\n\nDit is de staat waarin genezing plaatsvindt."},
-     {t:"De Oranje Stand – Fight & Flight",b:"Fight: controle houden, perfectionisme, alles regelen, moeilijk ontspannen.\n\nFlight: agenda staat vol, je werkt hard, rust voelt ongemakkelijk. Wanneer je eindelijk op de bank zit... pak je alsnog je telefoon.\n\nNiet omdat je lui bent. Maar omdat stilstand onveilig voelt."},
-     {t:"De Rode Stand – Freeze",b:"Freeze wordt vaak verkeerd begrepen: 'Ik doe niks. Ik ben lui.'\n\nMaar freeze is één van de slimste overlevingsmechanismen. Wanneer vechten of vluchten niet meer lukt, kiest jouw lichaam voor stilstand.\n\nDat gebeurt niet bewust. Dat gebeurt automatisch."},
+     {t:"Het beveiligingssysteem",b:"Jouw zenuwstelsel scant de hele dag je omgeving -- onbewust. We noemen dit neuroceptie.\n\nJe zenuwstelsel vraagt iedere seconde:\n• Ben ik veilig?\n• Kan ik ontspannen?\n• Is er gevaar?\n\nNog voordat jij erover nadenkt... heeft jouw lichaam al besloten."},
+     {t:"De Groene Stand - Veiligheid",b:"Je ademt rustig, voelt verbinding, kunt helder nadenken en geniet.\n\nJe immuunsysteem werkt optimaal. Je hormonen zijn meer in balans. Je lichaam kan herstellen.\n\nDit is de staat waarin genezing plaatsvindt."},
+     {t:"De Oranje Stand - Fight & Flight",b:"Fight: controle houden, perfectionisme, alles regelen, moeilijk ontspannen.\n\nFlight: agenda staat vol, je werkt hard, rust voelt ongemakkelijk. Wanneer je eindelijk op de bank zit... pak je alsnog je telefoon.\n\nNiet omdat je lui bent. Maar omdat stilstand onveilig voelt."},
+     {t:"De Rode Stand - Freeze",b:"Freeze wordt vaak verkeerd begrepen: 'Ik doe niks. Ik ben lui.'\n\nMaar freeze is één van de slimste overlevingsmechanismen. Wanneer vechten of vluchten niet meer lukt, kiest jouw lichaam voor stilstand.\n\nDat gebeurt niet bewust. Dat gebeurt automatisch."},
    ],
    exercises:[
      {t:"Herken jouw staat",prompts:["Wanneer schiet jij in fight? Wat zijn jouw signalen?","Wanneer schiet jij in flight? Wat zijn jouw signalen?","Wanneer schiet jij in freeze? Wat zijn jouw signalen?"]},
@@ -103,24 +103,24 @@ const MODULES = [
    quote:"Je lichaam onthoudt wat je hoofd soms allang vergeten is.",
    sections:[
      {t:"Wat is trauma?",b:"Trauma ontstaat wanneer jouw lichaam tijdens een stressvolle situatie niet de mogelijkheid heeft gehad om de opgebouwde spanning volledig af te maken. De energie blijft hangen.\n\nJouw lichaam blijft alert. Niet omdat het gevaar er nog is. Maar omdat jouw zenuwstelsel denkt dat het gevaar ieder moment terug kan komen."},
-     {t:"Grote T en kleine t",b:"Grote T trauma: ernstig ongeluk, geweld, misbruik, oorlog.\n\nKleine t trauma — hier herkennen veel vrouwen zich:\n• Nooit echt gezien worden\n• Altijd sterk moeten zijn\n• Emoties moeten wegstoppen\n• Jarenlang over je eigen grenzen gaan\n\nAls dit jarenlang gebeurt, ervaart jouw zenuwstelsel dat als chronische stress."},
-     {t:"Fascia: het bindweefsel",b:"Je lichaam is verbonden door een netwerk van bindweefsel — de fascia. Wanneer jij langdurig stress ervaart, spannen spieren zich aan.\n\nVeel mensen ervaren daardoor: stijve nek, schouders vol spanning, pijnlijke heupen, rugklachten.\n\nNiet omdat er iets kapot is. Maar omdat het lichaam zich al lange tijd beschermt."},
+     {t:"Grote T en kleine t",b:"Grote T trauma: ernstig ongeluk, geweld, misbruik, oorlog.\n\nKleine t trauma -- hier herkennen veel vrouwen zich:\n• Nooit echt gezien worden\n• Altijd sterk moeten zijn\n• Emoties moeten wegstoppen\n• Jarenlang over je eigen grenzen gaan\n\nAls dit jarenlang gebeurt, ervaart jouw zenuwstelsel dat als chronische stress."},
+     {t:"Fascia: het bindweefsel",b:"Je lichaam is verbonden door een netwerk van bindweefsel -- de fascia. Wanneer jij langdurig stress ervaart, spannen spieren zich aan.\n\nVeel mensen ervaren daardoor: stijve nek, schouders vol spanning, pijnlijke heupen, rugklachten.\n\nNiet omdat er iets kapot is. Maar omdat het lichaam zich al lange tijd beschermt."},
    ],
    exercises:[
      {t:"Waar draag jij spanning?",inst:"Ga rustig staan. Sluit je ogen. Adem drie keer diep in. Voel je lichaam. Leg één hand op de plek van spanning.\n\nVraag jezelf: 'Wat probeer jij mij te vertellen?'",prompts:["Waar voel ik spanning?","Wat probeert mijn lichaam te zeggen?"]},
-     {t:"Schud de spanning los",inst:"Zet een timer op 2 minuten. Begin zachtjes te schudden — handen, armen, schouders, benen, heupen, je hele lichaam. Niet mooi. Gewoon los. Adem rustig door.\n\nStop. Blijf 1 minuut stil staan. Voel na."},
+     {t:"Schud de spanning los",inst:"Zet een timer op 2 minuten. Begin zachtjes te schudden -- handen, armen, schouders, benen, heupen, je hele lichaam. Niet mooi. Gewoon los. Adem rustig door.\n\nStop. Blijf 1 minuut stil staan. Voel na."},
    ],
    aff:"Mijn lichaam heeft geleerd zichzelf te beschermen. Vanaf vandaag leer ik luisteren in plaats van vechten."},
 
   {id:4,emoji:"🌊",color:"#6B9FC4",title:"Reguleer je zenuwstelsel",
    quote:"Je kunt jezelf niet uit een overlevingsstand denken. Je lichaam heeft eerst veiligheid nodig.",
    sections:[
-     {t:"Neuroplasticiteit",b:"Jouw zenuwstelsel leert niet door woorden. Het leert door ervaringen. Iedere keer dat jouw lichaam ervaart: 'Ik ben veilig' — wordt er een nieuw paadje aangelegd.\n\nDat is neuroplasticiteit. Je brein en zenuwstelsel kunnen veranderen. Niet in één dag. Maar iedere dag een klein beetje."},
+     {t:"Neuroplasticiteit",b:"Jouw zenuwstelsel leert niet door woorden. Het leert door ervaringen. Iedere keer dat jouw lichaam ervaart: 'Ik ben veilig' -- wordt er een nieuw paadje aangelegd.\n\nDat is neuroplasticiteit. Je brein en zenuwstelsel kunnen veranderen. Niet in één dag. Maar iedere dag een klein beetje."},
      {t:"De nervus vagus",b:"De nervus vagus is de rem van jouw zenuwstelsel. Wanneer deze zenuw goed functioneert: herstel je sneller na stress, slaap je beter, voel je meer verbinding.\n\nHet mooie is: je kunt hem trainen. Niet door hard te werken, maar door herhaling. Kleine veilige momenten, meerdere keren per dag."},
    ],
    exercises:[
      {t:"3-6 Ademhaling",inst:"Leg één hand op je borst, één hand op je buik.\n\nAdem in door je neus: 3 tellen.\nAdem uit: 6 tellen.\n\nHerhaal minimaal 10 keer.",prompts:["Voel ik verschil?","Waar voel ik ontspanning?"]},
-     {t:"Vlinderhug",inst:"Kruis je armen voor je borst. Leg je handen op je bovenarmen. Tik afwisselend links en rechts — rustig. Adem langzaam door. Doe dit 2-5 minuten."},
+     {t:"Vlinderhug",inst:"Kruis je armen voor je borst. Leg je handen op je bovenarmen. Tik afwisselend links en rechts -- rustig. Adem langzaam door. Doe dit 2-5 minuten."},
      {t:"Hummen",inst:"Adem rustig in. Hum tijdens de uitademing. Voel de trilling in je keel, je borst, je gezicht. De nervus vagus loopt langs je stembanden. Doe dit 5 minuten."},
    ],
    aff:"Ik hoef mezelf niet te forceren. Ik mag vertragen. Ik mag voelen. Mijn lichaam leert iedere dag opnieuw dat het veilig is."},
@@ -128,7 +128,7 @@ const MODULES = [
   {id:5,emoji:"🌸",color:T.rose,title:"Van overleven naar leven",
    quote:"Het doel is niet om nooit meer stress te ervaren. Het doel is dat je lichaam weet hoe het terug mag keren naar veiligheid.",
    sections:[
-     {t:"Genezing is geen rechte lijn",b:"Je zult momenten blijven hebben waarop je systeem opschakelt. Dat is normaal.\n\nHet verschil is dat je het nu eerder gaat herkennen. En in plaats van jezelf af te wijzen — kun je jezelf ondersteunen.\n\nDat is echte groei."},
+     {t:"Genezing is geen rechte lijn",b:"Je zult momenten blijven hebben waarop je systeem opschakelt. Dat is normaal.\n\nHet verschil is dat je het nu eerder gaat herkennen. En in plaats van jezelf af te wijzen -- kun je jezelf ondersteunen.\n\nDat is echte groei."},
      {t:"Thuiskomen",b:"Misschien heb je jarenlang geprobeerd iemand anders te worden. Rustiger. Sterker. Minder gevoelig.\n\nMaar misschien ligt de oplossing niet in veranderen. Misschien ligt de oplossing in thuiskomen. Thuiskomen in jouw lichaam. Door jezelf eindelijk toestemming te geven om te voelen."},
    ],
    exercises:[
@@ -141,7 +141,7 @@ const MODULES = [
   {id:6,emoji:"🥗",color:T.gold,title:"Bonus: Voeding voor je zenuwstelsel",
    quote:"Als je lichaam de juiste bouwstoffen mist, blijft herstellen veel moeilijker.",
    sections:[
-     {t:"Eiwitten: bouwstenen van herstel",b:"Eiwitten bestaan uit aminozuren — de bouwstenen voor spieren, hormonen, enzymen én neurotransmitters zoals serotonine, dopamine en GABA.\n\nRichtlijn: 1,2 tot 1,8 gram eiwit per kilogram lichaamsgewicht per dag.\n\nGoede bronnen: eieren, kip, vis, Griekse yoghurt, kwark, linzen, tempeh, edamame."},
+     {t:"Eiwitten: bouwstenen van herstel",b:"Eiwitten bestaan uit aminozuren -- de bouwstenen voor spieren, hormonen, enzymen én neurotransmitters zoals serotonine, dopamine en GABA.\n\nRichtlijn: 1,2 tot 1,8 gram eiwit per kilogram lichaamsgewicht per dag.\n\nGoede bronnen: eieren, kip, vis, Griekse yoghurt, kwark, linzen, tempeh, edamame."},
      {t:"Bloedsuiker en stress",b:"Een dalende bloedsuiker wordt door je lichaam gezien als stress. Je maakt meer cortisol aan.\n\nBouw maaltijden op uit: eiwitten + gezonde vetten + vezels + langzame koolhydraten.\n\nBegin je dag met een groot glas water + citroen + Keltisch zeezout voor mineralen."},
    ],
    exercises:[
@@ -152,7 +152,7 @@ const MODULES = [
   {id:7,emoji:"💎",color:T.mauve,title:"Bonus: Mineralen",
    quote:"Zonder voldoende mineralen kan jouw lichaam stress veel moeilijker verwerken.",
    sections:[
-     {t:"Waarom mineralen?",b:"Mineralen zijn betrokken bij duizenden processen. Ze zorgen ervoor dat zenuwen communiceren, spieren ontspannen en energie wordt geproduceerd.\n\nWanneer je langdurig stress ervaart, verbruik je meer mineralen. Een tekort maakt je gevoeliger voor stress — een vicieuze cirkel."},
+     {t:"Waarom mineralen?",b:"Mineralen zijn betrokken bij duizenden processen. Ze zorgen ervoor dat zenuwen communiceren, spieren ontspannen en energie wordt geproduceerd.\n\nWanneer je langdurig stress ervaart, verbruik je meer mineralen. Een tekort maakt je gevoeliger voor stress -- een vicieuze cirkel."},
      {t:"Magnesium",b:"Magnesium speelt een rol bij meer dan 300 processen: spierontspanning, zenuwgeleiding, energieproductie, slaap.\n\nMogelijke signalen van een tekort: gespannen spieren, ooglidtrekkingen, slecht slapen, onrust, vermoeidheid, hoofdpijn."},
      {t:"Mijn ochtendritueel",b:"Iedere ochtend:\n• Groot glas water\n• Klein snufje Keltisch zeezout\n• Vers citroensap\n• Rustig opdrinken\n• Dan een eiwitrijk ontbijt\n\nEen liefdevolle manier om te zeggen: 'Ik zorg vandaag voor je.'"},
    ],
@@ -164,95 +164,40 @@ const MODULES = [
   {id:9,emoji:"🦁",color:"#E8A44A",title:"Hoe dieren ons de weg wijzen: uit de freeze",
    quote:"Dieren schudden stress letterlijk van zich af. Wij mensen zijn dat verleerd. Maar we kunnen het opnieuw leren.",
    sections:[
-     {t:"Wat dieren ons leren",b:"Kijk eens naar een zebra die net is ontsnapt aan een leeuw. Wat doet die zebra?
-
-Hij stopt. Hij trilt. Hij schudt zijn hele lichaam uit. En dan... graast hij gewoon weer verder.
-
-Dat is geen zwakte. Dat is biologische intelligentie.
-
-Dieren ontladen spanning automatisch na een bedreiging. Hun zenuwstelsel weet precies wat het moet doen: de opgebouwde vecht-of-vlucht energie afvoeren via beweging en trillen.
-
-Wij mensen doen dat niet meer. We houden ons groot. We gaan weer aan het werk. We nemen de spanning mee.
-
-En dat is precies waarom zo veel vrouwen vastzitten in een chronische overlevingsstand."},
-     {t:"Freeze: het meest misbegrepen overlevingsmechanisme",b:"Wanneer een dier wordt aangevallen en niet kan vluchten of vechten... speelt het dood.
-
-Het lichaam bevriest volledig. De hartslag daalt. De pijn wordt gedempt. Het bewustzijn vervaagt.
-
-Dat is freeze.
-
-Bij mensen ziet freeze er zo uit:
-• Je wilt iets doen maar kunt jezelf niet in beweging krijgen
-• Je ligt op de bank terwijl je weet dat je moet opstaan
-• Je kijkt naar je telefoon maar registreert niets
-• Je bent aanwezig maar ook niet echt er
-• Je voelt je leeg, vlak, verdoofd
-• Je reageert niet op berichten
-• Alles voelt zwaar en traag
-
-Dit is geen luiheid. Dit is een zenuwstelsel dat heeft besloten: stilstand is de veiligste optie."},
-     {t:"Waarom uit freeze komen anders werkt",b:"Het grote misverstand is dat je uit freeze komt door harder je best te doen.
-
-Door jezelf te motiveren.
-Door een to-do lijst te maken.
-Door 'gewoon te beginnen'.
-
-Maar freeze is een lichamelijke staat — geen mentale keuze.
-
-Je kunt jezelf niet denken uit freeze.
-
-Wat wel helpt:
-• Kleine, zachte bewegingen — niet groot of krachtig
-• Warmte — een warme douche, een deken, warme thee
-• Zintuiglijke prikkels — een geur, een textuur, een geluid
-• Rustige aanwezigheid van een ander mens of dier
-• Heel langzaam ademen
-• De grond onder je voeten voelen
-
-Het gaat erom je zenuwstelsel zacht te laten weten: het gevaar is voorbij. Je kunt nu voorzichtig uit de stilstand komen."},
-     {t:"Het trillingsreflex: de sleutel",b:"TRE — Tension & Trauma Releasing Exercises — is gebaseerd op precies dit principe.
-
-Het activeert de natuurlijke trillingsreflex die dieren automatisch gebruiken.
-
-Wanneer je lichaam begint te trillen tijdens TRE, is dat geen zwakte. Dat is je zenuwstelsel dat doet wat het altijd al heeft willen doen:
-
-Ontladen.
-
-Niet denken. Niet begrijpen. Niet verwerken.
-
-Gewoon ontladen.
-
-En na die ontlading? Voelen veel vrouwen een diepe rust die ze al jaren niet meer hebben gevoeld."},
+     {t:"Wat dieren ons leren",b:"Kijk eens naar een zebra die net is ontsnapt aan een leeuw. Wat doet die zebra?\n\nHij stopt. Hij trilt. Hij schudt zijn hele lichaam uit. En dan... graast hij gewoon weer verder.\n\nDat is geen zwakte. Dat is biologische intelligentie.\n\nDieren ontladen spanning automatisch na een bedreiging. Hun zenuwstelsel weet precies wat het moet doen: de opgebouwde vecht-of-vlucht energie afvoeren via beweging en trillen.\n\nWij mensen doen dat niet meer. We houden ons groot. We gaan weer aan het werk. We nemen de spanning mee.\n\nEn dat is precies waarom zo veel vrouwen vastzitten in een chronische overlevingsstand."},
+     {t:"Freeze: het meest misbegrepen overlevingsmechanisme",b:"Wanneer een dier wordt aangevallen en niet kan vluchten of vechten... speelt het dood.\n\nHet lichaam bevriest volledig. De hartslag daalt. De pijn wordt gedempt. Het bewustzijn vervaagt.\n\nDat is freeze.\n\nBij mensen ziet freeze er zo uit:\n• Je wilt iets doen maar kunt jezelf niet in beweging krijgen\n• Je ligt op de bank terwijl je weet dat je moet opstaan\n• Je kijkt naar je telefoon maar registreert niets\n• Je bent aanwezig maar ook niet echt er\n• Je voelt je leeg, vlak, verdoofd\n• Je reageert niet op berichten\n• Alles voelt zwaar en traag\n\nDit is geen luiheid. Dit is een zenuwstelsel dat heeft besloten: stilstand is de veiligste optie."},
+     {t:"Waarom uit freeze komen anders werkt",b:"Het grote misverstand is dat je uit freeze komt door harder je best te doen.\n\nDoor jezelf te motiveren.\nDoor een to-do lijst te maken.\nDoor 'gewoon te beginnen'.\n\nMaar freeze is een lichamelijke staat -- geen mentale keuze.\n\nJe kunt jezelf niet denken uit freeze.\n\nWat wel helpt:\n• Kleine, zachte bewegingen -- niet groot of krachtig\n• Warmte -- een warme douche, een deken, warme thee\n• Zintuiglijke prikkels -- een geur, een textuur, een geluid\n• Rustige aanwezigheid van een ander mens of dier\n• Heel langzaam ademen\n• De grond onder je voeten voelen\n\nHet gaat erom je zenuwstelsel zacht te laten weten: het gevaar is voorbij. Je kunt nu voorzichtig uit de stilstand komen."},
+     {t:"Het trillingsreflex: de sleutel",b:"TRE -- Tension & Trauma Releasing Exercises -- is gebaseerd op precies dit principe.\n\nHet activeert de natuurlijke trillingsreflex die dieren automatisch gebruiken.\n\nWanneer je lichaam begint te trillen tijdens TRE, is dat geen zwakte. Dat is je zenuwstelsel dat doet wat het altijd al heeft willen doen:\n\nOntladen.\n\nNiet denken. Niet begrijpen. Niet verwerken.\n\nGewoon ontladen.\n\nEn na die ontlading? Voelen veel vrouwen een diepe rust die ze al jaren niet meer hebben gevoeld."},
    ],
    exercises:[
      {t:"Uit freeze stappen: de 4-stappen methode",inst:"Wanneer je merkt dat je in freeze zit, doe dit:
 
-Stap 1 — Erken het zonder oordeel
+Stap 1 -- Erken het zonder oordeel
 Zeg tegen jezelf: 'Mijn lichaam is nu in freeze. Dat is oké. Dat is veilig.'
 
-Stap 2 — Voel de grond
+Stap 2 -- Voel de grond
 Zet beide voeten plat op de vloer. Druk ze bewust naar beneden. Voel het contact. Dit vertelt je zenuwstelsel: ik sta op vaste grond.
 
-Stap 3 — Één kleine beweging
+Stap 3 -- Één kleine beweging
 Niet opstaan. Niet presteren. Alleen: beweeg één vinger. Dan je hand. Dan je pols. Heel langzaam.
 
-Stap 4 — Adem verlengd uit
-Adem in door je neus — 4 tellen. Adem langzaam uit door je mond — 8 tellen. Dit activeert je parasympathisch zenuwstelsel.",prompts:["Hoe voelde ik mij voor de oefening?","Welke stap hielp het meest?","Wat merkte ik in mijn lichaam?"]},
-     {t:"Het dierenschud",inst:"Dit is de meest directe manier om je zenuwstelsel te ontladen — precies zoals dieren dat doen.
+Stap 4 -- Adem verlengd uit
+Adem in door je neus -- 4 tellen. Adem langzaam uit door je mond -- 8 tellen. Dit activeert je parasympathisch zenuwstelsel.",prompts:["Hoe voelde ik mij voor de oefening?","Welke stap hielp het meest?","Wat merkte ik in mijn lichaam?"]},
+     {t:"Het dierenschud",inst:"Dit is de meest directe manier om je zenuwstelsel te ontladen -- precies zoals dieren dat doen.
 
 Ga stevig staan. Voeten op schouderbreedte.
 
-Begin bij je voeten. Maak kleine trilbewegingen — alsof je de koude van je af schudt.
+Begin bij je voeten. Maak kleine trilbewegingen -- alsof je de koude van je af schudt.
 
 Laat het langzaam opstijgen:
 → Enkels
 → Knieën
-→ Heupen — laat ze los bewegen
+→ Heupen -- laat ze los bewegen
 → Buik
 → Schouders
-→ Armen — schud ze los
-→ Handen — laat ze bengelen
-→ Hoofd — heel voorzichtig
+→ Armen -- schud ze los
+→ Handen -- laat ze bengelen
+→ Hoofd -- heel voorzichtig
 
 Doe dit 3 minuten. Niet mooi. Niet gecontroleerd. Gewoon schudden.
 
@@ -270,7 +215,7 @@ Warmte stuurt direct een signaal van veiligheid naar je zenuwstelsel. Het is een
 
 Zeg innerlijk: 'Ik ben veilig. Ik mag warm zijn. Mijn lichaam mag ontdooien.'",prompts:["Welke warmtebron hielp mij vandaag?","Hoe voelde mijn lichaam voor en na?"]},
    ],
-   aff:"Mijn lichaam weet hoe het spanning los moet laten. Ik hoef het alleen maar de ruimte te geven. Zoals dieren dat doen — van nature, zonder oordeel."},
+   aff:"Mijn lichaam weet hoe het spanning los moet laten. Ik hoef het alleen maar de ruimte te geven. Zoals dieren dat doen -- van nature, zonder oordeel."},
 
   {id:8,emoji:"🌿",color:T.sage,title:"Bonus: De kracht van beweging",
    quote:"Juist op de dagen dat je nergens zin in hebt, heeft je lichaam vaak beweging nodig.",
@@ -279,8 +224,8 @@ Zeg innerlijk: 'Ik ben veilig. Ik mag warm zijn. Mijn lichaam mag ontdooien.'",p
      {t:"Begin klein",b:"Vraag jezelf: wat is de kleinste beweging die vandaag mogelijk is?\n\nMisschien: één minuut lopen, vijf squats, even rekken, één liedje dansen.\n\nDat is genoeg. Je zenuwstelsel beloont iedere beweging."},
    ],
    exercises:[
-     {t:"De één-liedje-regel",inst:"Kies een nummer waar jij blij van wordt. Zet het aan en beweeg — niet mooi, gewoon zoals jouw lichaam wil.",prompts:["Hoe voelde ik mij ervoor?","Hoe voel ik mij nu?"]},
-     {t:"Schud spanning los",inst:"Sta stevig. Schud handen, armen, schouders, benen, heupen — je hele lichaam. 2 minuten. Dan 1 minuut stil staan. Voel na."},
+     {t:"De één-liedje-regel",inst:"Kies een nummer waar jij blij van wordt. Zet het aan en beweeg -- niet mooi, gewoon zoals jouw lichaam wil.",prompts:["Hoe voelde ik mij ervoor?","Hoe voel ik mij nu?"]},
+     {t:"Schud spanning los",inst:"Sta stevig. Schud handen, armen, schouders, benen, heupen -- je hele lichaam. 2 minuten. Dan 1 minuut stil staan. Voel na."},
    ],
    aff:"Mijn lichaam weet de weg naar herstel. Iedere beweging brengt mij dichter bij mezelf."},
 ];
@@ -355,7 +300,7 @@ function CheckRow({ item, checked, onToggle }) {
                   <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
                   <div>
                     <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
-                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw — dat verandert meer dan je denkt."</p>
+                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw -- dat verandert meer dan je denkt."</p>
                     <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
                   </div>
                 </div>
@@ -457,7 +402,7 @@ function ProgBar({ value, color=T.rose }) {
                   <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
                   <div>
                     <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
-                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw — dat verandert meer dan je denkt."</p>
+                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw -- dat verandert meer dan je denkt."</p>
                     <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
                   </div>
                 </div>
@@ -686,7 +631,7 @@ function BreathTimer({ ex }) {
                   <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
                   <div>
                     <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
-                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw — dat verandert meer dan je denkt."</p>
+                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw -- dat verandert meer dan je denkt."</p>
                     <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
                   </div>
                 </div>
@@ -838,7 +783,7 @@ export default function App() {
       <div style={{ position:"relative", zIndex:2 }}>
         <span style={s.ey}>Open Your Mind Bewustzijn · Wendy van der Vecht</span>
         <h1 style={s.h1}>Van Overleven<br/><em style={s.em}>naar Leven</em></h1>
-        <p style={{ ...s.mu, maxWidth:420, margin:"0 auto 36px" }}>Het programma dat jou helpt terug te keren naar jezelf — via je lichaam, niet via je hoofd.</p>
+        <p style={{ ...s.mu, maxWidth:420, margin:"0 auto 36px" }}>Het programma dat jou helpt terug te keren naar jezelf -- via je lichaam, niet via je hoofd.</p>
         <button style={s.btn()} onClick={() => { setScreen("access"); scrollTop(); }}>Start het programma</button>
       </div>
     </div>
@@ -927,7 +872,7 @@ export default function App() {
 
           <div style={{ borderLeft:`2px solid ${T.rose}`, paddingLeft:18, marginBottom:28 }}>
             <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.2rem", fontStyle:"italic", color:T.muted, lineHeight:1.65 }}>Je lichaam liegt niet. Het vertelt de waarheid die je hoofd probeert te overleven.</p>
-            <p style={{ fontSize:11, color:T.rose, marginTop:10 }}>— Liefs Wendy</p>
+            <p style={{ fontSize:11, color:T.rose, marginTop:10 }}>-- Liefs Wendy</p>
           </div>
 
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:8 }}>
@@ -1013,7 +958,7 @@ export default function App() {
           <span style={s.ey}>Dagelijkse rituelen</span>
           <h2 style={s.h2}>Jouw <em style={s.em}>routines</em></h2>
 
-          <div style={{ fontSize:11, letterSpacing:"0.2em", textTransform:"uppercase", color:T.gold, marginBottom:10 }}>🌅 Ochtendroutine — {mPct}%</div>
+          <div style={{ fontSize:11, letterSpacing:"0.2em", textTransform:"uppercase", color:T.gold, marginBottom:10 }}>🌅 Ochtendroutine -- {mPct}%</div>
           <ProgBar value={mPct} color={T.gold}/>
           <div style={{ marginTop:16, marginBottom:32 }}>
             {MORNING.map(item => (
@@ -1029,7 +974,7 @@ export default function App() {
             </div>
           )}
 
-          <div style={{ fontSize:11, letterSpacing:"0.2em", textTransform:"uppercase", color:T.mauve, marginBottom:10 }}>🌙 Avondroutine — {ePct}%</div>
+          <div style={{ fontSize:11, letterSpacing:"0.2em", textTransform:"uppercase", color:T.mauve, marginBottom:10 }}>🌙 Avondroutine -- {ePct}%</div>
           <ProgBar value={ePct} color={T.mauve}/>
           <div style={{ marginTop:16 }}>
             {EVENING.map(item => (
@@ -1046,7 +991,7 @@ export default function App() {
           )}
 
           {/* OVERDAG ROUTINE */}
-          <div style={{ fontSize:11, letterSpacing:"0.2em", textTransform:"uppercase", color:"#E8A44A", margin:"36px 0 10px" }}>☀️ Overdag routine — {dPct}%</div>
+          <div style={{ fontSize:11, letterSpacing:"0.2em", textTransform:"uppercase", color:"#E8A44A", margin:"36px 0 10px" }}>☀️ Overdag routine -- {dPct}%</div>
           <ProgBar value={dPct} color="#E8A44A"/>
           <div style={{ marginTop:16 }}>
             {MIDDAY.map(item => (
@@ -1100,7 +1045,7 @@ export default function App() {
         <div style={s.wrap} className="fu">
           <span style={s.ey}>Foto progressie</span>
           <h2 style={s.h2}>Zie jouw<br/><em style={s.em}>transformatie</em></h2>
-          <p style={{ ...s.mu, marginBottom:24 }}>Maak dagelijks een selfie op hetzelfde tijdstip. Na een paar weken zie je het verschil — meer rust, minder spanning in je gezicht.</p>
+          <p style={{ ...s.mu, marginBottom:24 }}>Maak dagelijks een selfie op hetzelfde tijdstip. Na een paar weken zie je het verschil -- meer rust, minder spanning in je gezicht.</p>
 
           {/* Upload */}
           <div style={s.card({ textAlign:"center", border:"1px solid rgba(249,132,229,0.2)", marginBottom:20, padding:"28px 18px" })}>
@@ -1126,7 +1071,7 @@ export default function App() {
           {/* Tips */}
           <div style={s.card({ marginBottom:20 })}>
             <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.12em", textTransform:"uppercase", marginBottom:12 }}>Tips voor consistente foto's</div>
-            {["Altijd hetzelfde tijdstip (bijv. elke ochtend na douche)","Zelfde lichtbron — bij voorkeur daglicht bij een raam","Zelfde hoek — frontaal of driekwart","Neutrale uitdrukking — laat je kaak zakken","Let op spanning in je kaak, schouders en ogen"].map((tip, i) => (
+            {["Altijd hetzelfde tijdstip (bijv. elke ochtend na douche)","Zelfde lichtbron -- bij voorkeur daglicht bij een raam","Zelfde hoek -- frontaal of driekwart","Neutrale uitdrukking -- laat je kaak zakken","Let op spanning in je kaak, schouders en ogen"].map((tip, i) => (
               <div key={i} style={{ display:"flex", gap:10, marginBottom:7 }}>
                 <span style={{ color:T.rose, flexShrink:0 }}>✦</span>
                 <span style={{ fontSize:13, color:T.muted }}>{tip}</span>
@@ -1337,10 +1282,10 @@ export default function App() {
             let total = 0;
             ["gevoel","lichaam","energie"].forEach(k => { if (ciData[k] !== undefined) total += sc[k][ciData[k]] || 0; });
             const states = [
-              { max:2, label:"Rustig & verbonden", color:T.sage, title:"Jouw systeem voelt vandaag veilig", body:"Dit is hoe leven voelt als je niet in overleving staat. Onthoud dit gevoel.", adem:"Coherent ademen: 5 seconden in, 5 seconden uit.", scan:"Beweeg je aandacht van hoofd naar voeten. Zeg: 'Ik ben veilig.'", move:"Doe iets wat je blij maakt — dansen, wandelen." },
+              { max:2, label:"Rustig & verbonden", color:T.sage, title:"Jouw systeem voelt vandaag veilig", body:"Dit is hoe leven voelt als je niet in overleving staat. Onthoud dit gevoel.", adem:"Coherent ademen: 5 seconden in, 5 seconden uit.", scan:"Beweeg je aandacht van hoofd naar voeten. Zeg: 'Ik ben veilig.'", move:"Doe iets wat je blij maakt -- dansen, wandelen." },
               { max:6, label:"Lichte druk", color:T.gold, title:"Je systeem staat licht onder druk", body:"Je voelt wat spanning maar kunt er nog mee omgaan. Jouw lichaam fluistert. Luister nu.", adem:"3-6 ademhaling: 3 seconden in, 6 seconden uit. Herhaal 10 keer.", scan:"Sluit je ogen. Hand op spanning. Adem er naartoe. 'Ik zie je. Je mag er zijn.'", move:"Sta op. Rol je schouders. Schud je handen los." },
               { max:12, label:"Verhoogde spanning", color:T.rose, title:"Jouw systeem staat flink onder druk", body:"De spanning zit in je lichaam. Je hoofd staat aan. Dit is niet jouw schuld.", adem:"Box breathing: 4 in, 4 vasthouden, 4 uit, 4 vasthouden. Herhaal 6 keer.", scan:"Voeten op de vloer. Noem 5 dingen die je ziet, 4 hoort, 3 voelt.", move:"Schud zacht je benen. Laat het opstijgen. 2-3 minuten." },
-              { max:99, label:"In overleving", color:T.mauve, title:"Jouw systeem staat vandaag in overleving", body:"Je draagt vandaag heel veel. Stop met doorgaan. Kies nu voor jezelf.", adem:"Hand op borst, hand op buik. Adem in — buikhand omhoog. Adem dubbel zo lang uit.", scan:"Ga zitten of liggen. Voel de ondergrond. Zeg: 'Ik hoef nu niets.'", move:"Schud actief je hele lichaam. Of stamp zacht. Laat de spanning eruit." },
+              { max:99, label:"In overleving", color:T.mauve, title:"Jouw systeem staat vandaag in overleving", body:"Je draagt vandaag heel veel. Stop met doorgaan. Kies nu voor jezelf.", adem:"Hand op borst, hand op buik. Adem in -- buikhand omhoog. Adem dubbel zo lang uit.", scan:"Ga zitten of liggen. Voel de ondergrond. Zeg: 'Ik hoef nu niets.'", move:"Schud actief je hele lichaam. Of stamp zacht. Laat de spanning eruit." },
             ];
             const result = states.find(st => total <= st.max) || states[3];
             setCiResult(result);
@@ -1487,7 +1432,7 @@ export default function App() {
                   <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
                   <div>
                     <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
-                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw — dat verandert meer dan je denkt."</p>
+                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw -- dat verandert meer dan je denkt."</p>
                     <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
                   </div>
                 </div>
