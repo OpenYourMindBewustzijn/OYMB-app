@@ -3,8 +3,8 @@ import { useState, useRef, useCallback, useEffect } from "react";
 // ─── KLEUREN ─────────────────────────────────────────────────────────────────
 const T = {
   black:"#0E0D0B", dark:"#1A1814", mid:"#2C2820",
-  rose:"#C27FA0", gold:"#C9A96E", sage:"#8A9E8C",
-  cream:"#F0EBE1", muted:"rgba(240,235,225,0.55)", mauve:"#A0527A",
+  rose:"#F984E5", gold:"#C9A96E", sage:"#8A9E8C",
+  cream:"#F0EBE1", muted:"rgba(240,235,225,0.55)", mauve:"#D44DBF",
 };
 
 const G = `
@@ -28,6 +28,15 @@ const MORNING = [
   {id:"m4",emoji:"🎵",title:"Hummen",desc:"2 minuten — nervus vagus stimuleren via stembanden",time:"2 min"},
   {id:"m5",emoji:"🥚",title:"Eiwitrijk ontbijt",desc:"Minimaal 25-30 gram eiwit als basis voor de dag",time:"15 min"},
   {id:"m6",emoji:"✨",title:"Intentie",desc:"Wat heeft mijn lichaam vandaag nodig?",time:"2 min"},
+];
+
+const MIDDAY = [
+  {id:"d1",emoji:"💧",title:"Glas water drinken",desc:"Hydrateer — je bent waarschijnlijk uitgedroogd",time:"1 min"},
+  {id:"d2",emoji:"🚶",title:"Korte beweegpauze",desc:"Sta op, rek jezelf uit, loop even rond",time:"3 min"},
+  {id:"d3",emoji:"🌬",title:"5 diepe ademhalingen",desc:"Reset je zenuwstelsel midden op de dag",time:"1 min"},
+  {id:"d4",emoji:"☀️",title:"Buiten of bij een raam",desc:"Daglicht reguleert je cortisol en slaap",time:"5 min"},
+  {id:"d5",emoji:"🍽",title:"Eiwitrijke lunch",desc:"Bloedsuiker stabiel houden voor de middag",time:"20 min"},
+  {id:"d6",emoji:"💬",title:"Check-in met jezelf",desc:"Hoe voel ik mij nu? Wat heeft mijn lichaam nodig?",time:"1 min"},
 ];
 
 const EVENING = [
@@ -152,6 +161,117 @@ const MODULES = [
    ],
    aff:"Iedere kleine keuze helpt mijn lichaam herstellen."},
 
+  {id:9,emoji:"🦁",color:"#E8A44A",title:"Hoe dieren ons de weg wijzen: uit de freeze",
+   quote:"Dieren schudden stress letterlijk van zich af. Wij mensen zijn dat verleerd. Maar we kunnen het opnieuw leren.",
+   sections:[
+     {t:"Wat dieren ons leren",b:"Kijk eens naar een zebra die net is ontsnapt aan een leeuw. Wat doet die zebra?
+
+Hij stopt. Hij trilt. Hij schudt zijn hele lichaam uit. En dan... graast hij gewoon weer verder.
+
+Dat is geen zwakte. Dat is biologische intelligentie.
+
+Dieren ontladen spanning automatisch na een bedreiging. Hun zenuwstelsel weet precies wat het moet doen: de opgebouwde vecht-of-vlucht energie afvoeren via beweging en trillen.
+
+Wij mensen doen dat niet meer. We houden ons groot. We gaan weer aan het werk. We nemen de spanning mee.
+
+En dat is precies waarom zo veel vrouwen vastzitten in een chronische overlevingsstand."},
+     {t:"Freeze: het meest misbegrepen overlevingsmechanisme",b:"Wanneer een dier wordt aangevallen en niet kan vluchten of vechten... speelt het dood.
+
+Het lichaam bevriest volledig. De hartslag daalt. De pijn wordt gedempt. Het bewustzijn vervaagt.
+
+Dat is freeze.
+
+Bij mensen ziet freeze er zo uit:
+• Je wilt iets doen maar kunt jezelf niet in beweging krijgen
+• Je ligt op de bank terwijl je weet dat je moet opstaan
+• Je kijkt naar je telefoon maar registreert niets
+• Je bent aanwezig maar ook niet echt er
+• Je voelt je leeg, vlak, verdoofd
+• Je reageert niet op berichten
+• Alles voelt zwaar en traag
+
+Dit is geen luiheid. Dit is een zenuwstelsel dat heeft besloten: stilstand is de veiligste optie."},
+     {t:"Waarom uit freeze komen anders werkt",b:"Het grote misverstand is dat je uit freeze komt door harder je best te doen.
+
+Door jezelf te motiveren.
+Door een to-do lijst te maken.
+Door 'gewoon te beginnen'.
+
+Maar freeze is een lichamelijke staat — geen mentale keuze.
+
+Je kunt jezelf niet denken uit freeze.
+
+Wat wel helpt:
+• Kleine, zachte bewegingen — niet groot of krachtig
+• Warmte — een warme douche, een deken, warme thee
+• Zintuiglijke prikkels — een geur, een textuur, een geluid
+• Rustige aanwezigheid van een ander mens of dier
+• Heel langzaam ademen
+• De grond onder je voeten voelen
+
+Het gaat erom je zenuwstelsel zacht te laten weten: het gevaar is voorbij. Je kunt nu voorzichtig uit de stilstand komen."},
+     {t:"Het trillingsreflex: de sleutel",b:"TRE — Tension & Trauma Releasing Exercises — is gebaseerd op precies dit principe.
+
+Het activeert de natuurlijke trillingsreflex die dieren automatisch gebruiken.
+
+Wanneer je lichaam begint te trillen tijdens TRE, is dat geen zwakte. Dat is je zenuwstelsel dat doet wat het altijd al heeft willen doen:
+
+Ontladen.
+
+Niet denken. Niet begrijpen. Niet verwerken.
+
+Gewoon ontladen.
+
+En na die ontlading? Voelen veel vrouwen een diepe rust die ze al jaren niet meer hebben gevoeld."},
+   ],
+   exercises:[
+     {t:"Uit freeze stappen: de 4-stappen methode",inst:"Wanneer je merkt dat je in freeze zit, doe dit:
+
+Stap 1 — Erken het zonder oordeel
+Zeg tegen jezelf: 'Mijn lichaam is nu in freeze. Dat is oké. Dat is veilig.'
+
+Stap 2 — Voel de grond
+Zet beide voeten plat op de vloer. Druk ze bewust naar beneden. Voel het contact. Dit vertelt je zenuwstelsel: ik sta op vaste grond.
+
+Stap 3 — Één kleine beweging
+Niet opstaan. Niet presteren. Alleen: beweeg één vinger. Dan je hand. Dan je pols. Heel langzaam.
+
+Stap 4 — Adem verlengd uit
+Adem in door je neus — 4 tellen. Adem langzaam uit door je mond — 8 tellen. Dit activeert je parasympathisch zenuwstelsel.",prompts:["Hoe voelde ik mij voor de oefening?","Welke stap hielp het meest?","Wat merkte ik in mijn lichaam?"]},
+     {t:"Het dierenschud",inst:"Dit is de meest directe manier om je zenuwstelsel te ontladen — precies zoals dieren dat doen.
+
+Ga stevig staan. Voeten op schouderbreedte.
+
+Begin bij je voeten. Maak kleine trilbewegingen — alsof je de koude van je af schudt.
+
+Laat het langzaam opstijgen:
+→ Enkels
+→ Knieën
+→ Heupen — laat ze los bewegen
+→ Buik
+→ Schouders
+→ Armen — schud ze los
+→ Handen — laat ze bengelen
+→ Hoofd — heel voorzichtig
+
+Doe dit 3 minuten. Niet mooi. Niet gecontroleerd. Gewoon schudden.
+
+Stop dan. Sta stil. Adem. Voel na.
+
+Wat heeft je lichaam losgelaten?",prompts:["Hoe voelde het schudden?","Wat veranderde er in mijn lichaam?","Welke emotie of sensatie kwam op?"]},
+     {t:"Warmte als veiligheid",inst:"Wanneer je in diepe freeze zit en beweging te veel voelt:
+
+• Maak een kop warme thee of cacao
+• Wikkel een deken om je heen
+• Neem een warme douche of bad
+• Leg een warmwaterkruik op je buik
+
+Warmte stuurt direct een signaal van veiligheid naar je zenuwstelsel. Het is een van de meest onderschatte regulatietools.
+
+Zeg innerlijk: 'Ik ben veilig. Ik mag warm zijn. Mijn lichaam mag ontdooien.'",prompts:["Welke warmtebron hielp mij vandaag?","Hoe voelde mijn lichaam voor en na?"]},
+   ],
+   aff:"Mijn lichaam weet hoe het spanning los moet laten. Ik hoef het alleen maar de ruimte te geven. Zoals dieren dat doen — van nature, zonder oordeel."},
+
   {id:8,emoji:"🌿",color:T.sage,title:"Bonus: De kracht van beweging",
    quote:"Juist op de dagen dat je nergens zin in hebt, heeft je lichaam vaak beweging nodig.",
    sections:[
@@ -174,13 +294,13 @@ const s = {
   h3: { fontFamily:"'Cormorant Garamond',serif", fontSize:"clamp(1.1rem,3vw,1.5rem)", fontWeight:300, lineHeight:1.3, marginBottom:10 },
   em: { fontStyle:"italic", color:T.rose },
   mu: { color:T.muted, fontSize:14, lineHeight:1.85 },
-  card: (extra={}) => ({ background:T.dark, border:"1px solid rgba(194,127,160,0.1)", borderRadius:14, padding:"20px 16px", marginBottom:10, ...extra }),
+  card: (extra={}) => ({ background:T.dark, border:"1px solid rgba(249,132,229,0.1)", borderRadius:14, padding:"20px 16px", marginBottom:10, ...extra }),
   btn: (bg=T.rose, fg=T.black) => ({ display:"inline-flex", alignItems:"center", gap:8, background:bg, color:fg, border:"none", cursor:"pointer", fontSize:13, fontWeight:500, letterSpacing:"0.1em", textTransform:"uppercase", padding:"13px 24px", borderRadius:50, transition:"all 0.2s", textDecoration:"none", whiteSpace:"nowrap" }),
-  sm: { display:"inline-flex", alignItems:"center", gap:6, background:"none", color:T.rose, border:"1px solid rgba(194,127,160,0.3)", cursor:"pointer", fontSize:11, fontWeight:500, letterSpacing:"0.1em", textTransform:"uppercase", padding:"8px 16px", borderRadius:50, transition:"all 0.2s" },
-  inp: { width:"100%", background:"rgba(194,127,160,0.05)", border:"1px solid rgba(194,127,160,0.15)", borderRadius:9, padding:"11px 14px", color:T.cream, fontSize:14, marginBottom:10 },
-  ta: { width:"100%", background:"rgba(194,127,160,0.05)", border:"1px solid rgba(194,127,160,0.15)", borderRadius:9, padding:"11px 14px", color:T.cream, fontSize:14, minHeight:85, resize:"vertical" },
-  row: (active) => ({ display:"flex", alignItems:"center", gap:12, padding:"12px 14px", borderRadius:11, border:`1px solid ${active?"rgba(194,127,160,0.4)":"rgba(194,127,160,0.08)"}`, background:active?"rgba(194,127,160,0.1)":"transparent", cursor:"pointer", marginBottom:7, transition:"all 0.15s" }),
-  dot: (active) => ({ width:20, height:20, borderRadius:"50%", border:`1.5px solid ${active?T.rose:"rgba(194,127,160,0.3)"}`, background:active?T.rose:"transparent", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0, transition:"all 0.15s" }),
+  sm: { display:"inline-flex", alignItems:"center", gap:6, background:"none", color:T.rose, border:"1px solid rgba(249,132,229,0.3)", cursor:"pointer", fontSize:11, fontWeight:500, letterSpacing:"0.1em", textTransform:"uppercase", padding:"8px 16px", borderRadius:50, transition:"all 0.2s" },
+  inp: { width:"100%", background:"rgba(249,132,229,0.05)", border:"1px solid rgba(249,132,229,0.15)", borderRadius:9, padding:"11px 14px", color:T.cream, fontSize:14, marginBottom:10 },
+  ta: { width:"100%", background:"rgba(249,132,229,0.05)", border:"1px solid rgba(249,132,229,0.15)", borderRadius:9, padding:"11px 14px", color:T.cream, fontSize:14, minHeight:85, resize:"vertical" },
+  row: (active) => ({ display:"flex", alignItems:"center", gap:12, padding:"12px 14px", borderRadius:11, border:`1px solid ${active?"rgba(249,132,229,0.4)":"rgba(249,132,229,0.08)"}`, background:active?"rgba(249,132,229,0.1)":"transparent", cursor:"pointer", marginBottom:7, transition:"all 0.15s" }),
+  dot: (active) => ({ width:20, height:20, borderRadius:"50%", border:`1.5px solid ${active?T.rose:"rgba(249,132,229,0.3)"}`, background:active?T.rose:"transparent", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0, transition:"all 0.15s" }),
 };
 
 // ─── KLEINE COMPONENTEN ───────────────────────────────────────────────────────
@@ -197,14 +317,202 @@ function CheckRow({ item, checked, onToggle }) {
         <div style={{ fontSize:11, color:T.muted, marginTop:2 }}>{item.desc} · {item.time}</div>
       </div>
       {sp && <span style={{ position:"absolute", right:10, fontSize:16, color:T.rose, animation:"spark 0.7s ease-out forwards" }}>✦</span>}
+      {/* ═══ MEER ═══ */}
+      {tab === "meer" && (
+        <div style={s.wrap} className="fu">
+          <span style={s.ey}>Extra tools & support</span>
+          <h2 style={s.h2}>Alles wat je<br/><em style={s.em}>ondersteunt</em></h2>
+
+          {/* Hydratatie tracker */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>💧 Hydratatie vandaag</div>
+          <div style={s.card({ border:"1px solid rgba(107,159,196,0.3)", marginBottom:28 })}>
+            <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16 }}>
+              <div>
+                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"2.5rem", color:"#6B9FC4", lineHeight:1 }}>{water}</div>
+                <div style={{ fontSize:11, color:T.muted }}>van 8 glazen</div>
+              </div>
+              <div style={{ display:"flex", gap:8 }}>
+                <button style={s.btn("#6B9FC4")} onClick={() => setWater(w => Math.min(w+1, 8))}>+ Glas</button>
+                {water > 0 && <button style={s.sm} onClick={() => setWater(w => Math.max(w-1, 0))}>−</button>}
+              </div>
+            </div>
+            <div style={{ display:"flex", gap:6 }}>
+              {Array.from({length:8}).map((_,i) => (
+                <div key={i} style={{ flex:1, height:32, borderRadius:6, background: i < water ? "#6B9FC4" : "rgba(107,159,196,0.1)", border:"1px solid rgba(107,159,196,0.2)", transition:"background 0.3s", cursor:"pointer" }} onClick={() => setWater(i+1)}/>
+              ))}
+            </div>
+            {water >= 8 && <p style={{ fontSize:13, color:"#6B9FC4", marginTop:12, textAlign:"center" }}>🎉 Dagdoel gehaald! Jouw lichaam dankt je.</p>}
+            {water < 3 && water > 0 && <p style={{ fontSize:12, color:T.muted, marginTop:10 }}>Tip: drink een glas water voor je volgende maaltijd.</p>}
+          </div>
+
+          {/* Wendy's tip van de week */}
+          {wendyTip && (
+            <>
+              <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🌸 Wendy's tip van de week</div>
+              <div style={s.card({ border:`1px solid ${T.rose}25`, marginBottom:28, position:"relative" })}>
+                <button onClick={() => setWendyTip(false)} style={{ position:"absolute", top:12, right:12, background:"none", border:"none", color:T.muted, cursor:"pointer", fontSize:16 }}>×</button>
+                <div style={{ display:"flex", gap:14, alignItems:"flex-start" }}>
+                  <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
+                  <div>
+                    <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
+                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw — dat verandert meer dan je denkt."</p>
+                    <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* Sessie inplannen */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>📅 Sessie inplannen bij Wendy</div>
+          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:28 })}>
+            <p style={{ ...s.mu, fontSize:14, marginBottom:20 }}>Klaar voor een persoonlijke begeleiding? Plan een TRE of BRTT sessie in met Wendy.</p>
+            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+              <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20een%20sessie%20inplannen" target="_blank" rel="noopener noreferrer" style={s.btn()}>
+                📱 Plan via WhatsApp
+              </a>
+              <a href="https://www.oymb.nl" target="_blank" rel="noopener noreferrer" style={{ ...s.btn(T.dark, T.rose), border:`1px solid ${T.rose}30`, justifyContent:"center" }}>
+                🌐 Bekijk oymb.nl
+              </a>
+            </div>
+          </div>
+
+          {/* Voortgangsbadges */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🏆 Jouw badges</div>
+          <div style={s.card({ marginBottom:28 })}>
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:12 }}>
+              {[
+                { emoji:"🌱", label:"Gestart", earned: true },
+                { emoji:"🔥", label:`${streak} dagen`, earned: streak >= 1 },
+                { emoji:"💪", label:"Eiwitten", earned: totalP >= 50 },
+                { emoji:"💧", label:"Hydratatie", earned: water >= 8 },
+                { emoji:"🌅", label:"Ochtend ✓", earned: mPct === 100 },
+                { emoji:"🌙", label:"Avond ✓", earned: ePct === 100 },
+                { emoji:"📸", label:"Selfie", earned: Object.keys(selfies).length >= 1 },
+                { emoji:"📚", label:"Module 1", earned: !!modDone[1] },
+              ].map((badge, i) => (
+                <div key={i} style={{ textAlign:"center", opacity: badge.earned ? 1 : 0.25 }}>
+                  <div style={{ fontSize:28, marginBottom:4, filter: badge.earned ? "none" : "grayscale(100%)" }}>{badge.emoji}</div>
+                  <div style={{ fontSize:9, color: badge.earned ? T.rose : T.muted, letterSpacing:"0.05em" }}>{badge.label}</div>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize:11, color:T.muted, textAlign:"center", marginTop:16 }}>Verdien badges door de app dagelijks te gebruiken 🌸</p>
+          </div>
+
+          {/* Community */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>👥 Community</div>
+          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:16 })}>
+            <p style={{ ...s.mu, fontSize:14, marginBottom:16 }}>Doe mee met de community van vrouwen die hetzelfde doorlopen. Deel je ervaringen, stel vragen en inspireer elkaar.</p>
+            <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20lid%20worden%20van%20de%20community" target="_blank" rel="noopener noreferrer" style={s.btn()}>
+              🌸 Word lid van de community
+            </a>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
 
 function ProgBar({ value, color=T.rose }) {
   return (
-    <div style={{ height:3, background:"rgba(194,127,160,0.12)", borderRadius:50, overflow:"hidden" }}>
+    <div style={{ height:3, background:"rgba(249,132,229,0.12)", borderRadius:50, overflow:"hidden" }}>
       <div style={{ height:"100%", width:`${value}%`, background:color, borderRadius:50, transition:"width 0.4s ease" }}/>
+      {/* ═══ MEER ═══ */}
+      {tab === "meer" && (
+        <div style={s.wrap} className="fu">
+          <span style={s.ey}>Extra tools & support</span>
+          <h2 style={s.h2}>Alles wat je<br/><em style={s.em}>ondersteunt</em></h2>
+
+          {/* Hydratatie tracker */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>💧 Hydratatie vandaag</div>
+          <div style={s.card({ border:"1px solid rgba(107,159,196,0.3)", marginBottom:28 })}>
+            <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16 }}>
+              <div>
+                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"2.5rem", color:"#6B9FC4", lineHeight:1 }}>{water}</div>
+                <div style={{ fontSize:11, color:T.muted }}>van 8 glazen</div>
+              </div>
+              <div style={{ display:"flex", gap:8 }}>
+                <button style={s.btn("#6B9FC4")} onClick={() => setWater(w => Math.min(w+1, 8))}>+ Glas</button>
+                {water > 0 && <button style={s.sm} onClick={() => setWater(w => Math.max(w-1, 0))}>−</button>}
+              </div>
+            </div>
+            <div style={{ display:"flex", gap:6 }}>
+              {Array.from({length:8}).map((_,i) => (
+                <div key={i} style={{ flex:1, height:32, borderRadius:6, background: i < water ? "#6B9FC4" : "rgba(107,159,196,0.1)", border:"1px solid rgba(107,159,196,0.2)", transition:"background 0.3s", cursor:"pointer" }} onClick={() => setWater(i+1)}/>
+              ))}
+            </div>
+            {water >= 8 && <p style={{ fontSize:13, color:"#6B9FC4", marginTop:12, textAlign:"center" }}>🎉 Dagdoel gehaald! Jouw lichaam dankt je.</p>}
+            {water < 3 && water > 0 && <p style={{ fontSize:12, color:T.muted, marginTop:10 }}>Tip: drink een glas water voor je volgende maaltijd.</p>}
+          </div>
+
+          {/* Wendy's tip van de week */}
+          {wendyTip && (
+            <>
+              <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🌸 Wendy's tip van de week</div>
+              <div style={s.card({ border:`1px solid ${T.rose}25`, marginBottom:28, position:"relative" })}>
+                <button onClick={() => setWendyTip(false)} style={{ position:"absolute", top:12, right:12, background:"none", border:"none", color:T.muted, cursor:"pointer", fontSize:16 }}>×</button>
+                <div style={{ display:"flex", gap:14, alignItems:"flex-start" }}>
+                  <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
+                  <div>
+                    <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
+                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw — dat verandert meer dan je denkt."</p>
+                    <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* Sessie inplannen */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>📅 Sessie inplannen bij Wendy</div>
+          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:28 })}>
+            <p style={{ ...s.mu, fontSize:14, marginBottom:20 }}>Klaar voor een persoonlijke begeleiding? Plan een TRE of BRTT sessie in met Wendy.</p>
+            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+              <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20een%20sessie%20inplannen" target="_blank" rel="noopener noreferrer" style={s.btn()}>
+                📱 Plan via WhatsApp
+              </a>
+              <a href="https://www.oymb.nl" target="_blank" rel="noopener noreferrer" style={{ ...s.btn(T.dark, T.rose), border:`1px solid ${T.rose}30`, justifyContent:"center" }}>
+                🌐 Bekijk oymb.nl
+              </a>
+            </div>
+          </div>
+
+          {/* Voortgangsbadges */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🏆 Jouw badges</div>
+          <div style={s.card({ marginBottom:28 })}>
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:12 }}>
+              {[
+                { emoji:"🌱", label:"Gestart", earned: true },
+                { emoji:"🔥", label:`${streak} dagen`, earned: streak >= 1 },
+                { emoji:"💪", label:"Eiwitten", earned: totalP >= 50 },
+                { emoji:"💧", label:"Hydratatie", earned: water >= 8 },
+                { emoji:"🌅", label:"Ochtend ✓", earned: mPct === 100 },
+                { emoji:"🌙", label:"Avond ✓", earned: ePct === 100 },
+                { emoji:"📸", label:"Selfie", earned: Object.keys(selfies).length >= 1 },
+                { emoji:"📚", label:"Module 1", earned: !!modDone[1] },
+              ].map((badge, i) => (
+                <div key={i} style={{ textAlign:"center", opacity: badge.earned ? 1 : 0.25 }}>
+                  <div style={{ fontSize:28, marginBottom:4, filter: badge.earned ? "none" : "grayscale(100%)" }}>{badge.emoji}</div>
+                  <div style={{ fontSize:9, color: badge.earned ? T.rose : T.muted, letterSpacing:"0.05em" }}>{badge.label}</div>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize:11, color:T.muted, textAlign:"center", marginTop:16 }}>Verdien badges door de app dagelijks te gebruiken 🌸</p>
+          </div>
+
+          {/* Community */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>👥 Community</div>
+          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:16 })}>
+            <p style={{ ...s.mu, fontSize:14, marginBottom:16 }}>Doe mee met de community van vrouwen die hetzelfde doorlopen. Deel je ervaringen, stel vragen en inspireer elkaar.</p>
+            <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20lid%20worden%20van%20de%20community" target="_blank" rel="noopener noreferrer" style={s.btn()}>
+              🌸 Word lid van de community
+            </a>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
@@ -271,7 +579,7 @@ function BreathTimer({ ex }) {
   const cur = phases[pi] || phases[0];
   const circ = 2 * Math.PI * 72;
   const prog = cur ? (count / cur.dur) * 100 : 0;
-  const phaseColor = { inhale:ex.color, hold:`${ex.color}bb`, exhale:"rgba(194,127,160,0.45)", hold2:"rgba(194,127,160,0.25)" };
+  const phaseColor = { inhale:ex.color, hold:`${ex.color}bb`, exhale:"rgba(249,132,229,0.45)", hold2:"rgba(249,132,229,0.25)" };
 
   return (
     <div style={{ textAlign:"center", padding:"20px 0" }}>
@@ -340,6 +648,100 @@ function BreathTimer({ ex }) {
         </button>
         <button style={s.sm} onClick={reset}>Reset</button>
       </div>
+      {/* ═══ MEER ═══ */}
+      {tab === "meer" && (
+        <div style={s.wrap} className="fu">
+          <span style={s.ey}>Extra tools & support</span>
+          <h2 style={s.h2}>Alles wat je<br/><em style={s.em}>ondersteunt</em></h2>
+
+          {/* Hydratatie tracker */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>💧 Hydratatie vandaag</div>
+          <div style={s.card({ border:"1px solid rgba(107,159,196,0.3)", marginBottom:28 })}>
+            <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16 }}>
+              <div>
+                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"2.5rem", color:"#6B9FC4", lineHeight:1 }}>{water}</div>
+                <div style={{ fontSize:11, color:T.muted }}>van 8 glazen</div>
+              </div>
+              <div style={{ display:"flex", gap:8 }}>
+                <button style={s.btn("#6B9FC4")} onClick={() => setWater(w => Math.min(w+1, 8))}>+ Glas</button>
+                {water > 0 && <button style={s.sm} onClick={() => setWater(w => Math.max(w-1, 0))}>−</button>}
+              </div>
+            </div>
+            <div style={{ display:"flex", gap:6 }}>
+              {Array.from({length:8}).map((_,i) => (
+                <div key={i} style={{ flex:1, height:32, borderRadius:6, background: i < water ? "#6B9FC4" : "rgba(107,159,196,0.1)", border:"1px solid rgba(107,159,196,0.2)", transition:"background 0.3s", cursor:"pointer" }} onClick={() => setWater(i+1)}/>
+              ))}
+            </div>
+            {water >= 8 && <p style={{ fontSize:13, color:"#6B9FC4", marginTop:12, textAlign:"center" }}>🎉 Dagdoel gehaald! Jouw lichaam dankt je.</p>}
+            {water < 3 && water > 0 && <p style={{ fontSize:12, color:T.muted, marginTop:10 }}>Tip: drink een glas water voor je volgende maaltijd.</p>}
+          </div>
+
+          {/* Wendy's tip van de week */}
+          {wendyTip && (
+            <>
+              <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🌸 Wendy's tip van de week</div>
+              <div style={s.card({ border:`1px solid ${T.rose}25`, marginBottom:28, position:"relative" })}>
+                <button onClick={() => setWendyTip(false)} style={{ position:"absolute", top:12, right:12, background:"none", border:"none", color:T.muted, cursor:"pointer", fontSize:16 }}>×</button>
+                <div style={{ display:"flex", gap:14, alignItems:"flex-start" }}>
+                  <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
+                  <div>
+                    <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
+                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw — dat verandert meer dan je denkt."</p>
+                    <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* Sessie inplannen */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>📅 Sessie inplannen bij Wendy</div>
+          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:28 })}>
+            <p style={{ ...s.mu, fontSize:14, marginBottom:20 }}>Klaar voor een persoonlijke begeleiding? Plan een TRE of BRTT sessie in met Wendy.</p>
+            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+              <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20een%20sessie%20inplannen" target="_blank" rel="noopener noreferrer" style={s.btn()}>
+                📱 Plan via WhatsApp
+              </a>
+              <a href="https://www.oymb.nl" target="_blank" rel="noopener noreferrer" style={{ ...s.btn(T.dark, T.rose), border:`1px solid ${T.rose}30`, justifyContent:"center" }}>
+                🌐 Bekijk oymb.nl
+              </a>
+            </div>
+          </div>
+
+          {/* Voortgangsbadges */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🏆 Jouw badges</div>
+          <div style={s.card({ marginBottom:28 })}>
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:12 }}>
+              {[
+                { emoji:"🌱", label:"Gestart", earned: true },
+                { emoji:"🔥", label:`${streak} dagen`, earned: streak >= 1 },
+                { emoji:"💪", label:"Eiwitten", earned: totalP >= 50 },
+                { emoji:"💧", label:"Hydratatie", earned: water >= 8 },
+                { emoji:"🌅", label:"Ochtend ✓", earned: mPct === 100 },
+                { emoji:"🌙", label:"Avond ✓", earned: ePct === 100 },
+                { emoji:"📸", label:"Selfie", earned: Object.keys(selfies).length >= 1 },
+                { emoji:"📚", label:"Module 1", earned: !!modDone[1] },
+              ].map((badge, i) => (
+                <div key={i} style={{ textAlign:"center", opacity: badge.earned ? 1 : 0.25 }}>
+                  <div style={{ fontSize:28, marginBottom:4, filter: badge.earned ? "none" : "grayscale(100%)" }}>{badge.emoji}</div>
+                  <div style={{ fontSize:9, color: badge.earned ? T.rose : T.muted, letterSpacing:"0.05em" }}>{badge.label}</div>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize:11, color:T.muted, textAlign:"center", marginTop:16 }}>Verdien badges door de app dagelijks te gebruiken 🌸</p>
+          </div>
+
+          {/* Community */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>👥 Community</div>
+          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:16 })}>
+            <p style={{ ...s.mu, fontSize:14, marginBottom:16 }}>Doe mee met de community van vrouwen die hetzelfde doorlopen. Deel je ervaringen, stel vragen en inspireer elkaar.</p>
+            <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20lid%20worden%20van%20de%20community" target="_blank" rel="noopener noreferrer" style={s.btn()}>
+              🌸 Word lid van de community
+            </a>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
@@ -347,6 +749,8 @@ function BreathTimer({ ex }) {
 // ─── HOOFDAPP ─────────────────────────────────────────────────────────────────
 export default function App() {
   const [screen,   setScreen]   = useState("hero");
+  const [accessCode,  setAccessCode]  = useState("");
+  const [accessError, setAccessError] = useState("");
   const [tab,      setTab]      = useState("home");
   const [openMod,  setOpenMod]  = useState(null);
   const [journal,  setJournal]  = useState({});
@@ -364,27 +768,78 @@ export default function App() {
   const [logList,  setLogList]  = useState([]);
   const [logForm,  setLogForm]  = useState({ mood:"", energy:"", body:[], win:"", note:"", gratitude:"" });
   const [logSaved, setLogSaved] = useState(false);
+  const [water,    setWater]    = useState(0);
+  const [dDone,    setDDone]    = useState({});
+  const [badges,   setBadges]   = useState([]);
+  const [wendyTip, setWendyTip] = useState(true);
 
   const topRef = useRef(null);
   const scrollTop = () => topRef.current?.scrollIntoView({ behavior:"smooth" });
 
+  const CODES = ["OYMB2026", "OVERLEVEN", "WENDY2026", "VANOVERLEVING", "OYMB"];
+  const checkAccess = () => {
+    if (CODES.includes(accessCode.trim().toUpperCase())) {
+      setScreen("app");
+      scrollTop();
+    } else {
+      setAccessError("Deze code is niet geldig. Controleer je code of neem contact op met Wendy.");
+    }
+  };
+
   const mPct = Math.round(Object.values(mDone).filter(Boolean).length / MORNING.length * 100);
+  const dPct = Math.round(Object.values(dDone).filter(Boolean).length / MIDDAY.length * 100);
   const ePct = Math.round(Object.values(eDone).filter(Boolean).length / EVENING.length * 100);
   const totalP = pLog.reduce((a, n) => { const f = PROTEINS.find(p => p.name === n); return a + (f ? f.p : 0); }, 0);
   const pGoal = Math.round(weight * 1.5);
 
   const nav = (t) => { setTab(t); setOpenMod(null); setSelBreath(null); scrollTop(); };
 
+  // ── TOEGANG ──
+  if (screen === "access") return (
+    <div style={{ minHeight:"100svh", background:T.black, color:T.cream, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", textAlign:"center", padding:"60px 24px", position:"relative", overflow:"hidden" }}>
+      <div style={{ position:"absolute", width:400, height:400, borderRadius:"50%", background:"radial-gradient(circle,rgba(249,132,229,0.12) 0%,transparent 65%)", top:"50%", left:"50%", transform:"translate(-50%,-50%)", pointerEvents:"none" }}/>
+      <div style={{ position:"relative", zIndex:2, maxWidth:380, width:"100%" }}>
+        <div style={{ fontSize:48, marginBottom:20 }}>🌸</div>
+        <span style={s.ey}>Open Your Mind Bewustzijn</span>
+        <h2 style={{ ...s.h2, marginBottom:8 }}>Welkom bij<br/><em style={s.em}>Van Overleven naar Leven</em></h2>
+        <p style={{ ...s.mu, marginBottom:32, fontSize:14 }}>Vul je toegangscode in om de app te openen. Heb je nog geen code? Koop dan toegang via de link hieronder.</p>
+
+        <div style={{ background:T.dark, border:"1px solid rgba(249,132,229,0.2)", borderRadius:16, padding:"28px 24px", marginBottom:20 }}>
+          <div style={{ fontSize:12, color:T.muted, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:12 }}>Jouw toegangscode</div>
+          <input
+            type="text"
+            placeholder="Bijv. OYMB2026"
+            value={accessCode}
+            onChange={e => { setAccessCode(e.target.value.toUpperCase()); setAccessError(""); }}
+            onKeyDown={e => e.key === "Enter" && checkAccess()}
+            style={{ ...s.inp, textAlign:"center", fontSize:18, letterSpacing:"0.2em", fontWeight:500, marginBottom:16, color:T.rose }}
+          />
+          {accessError && <p style={{ fontSize:13, color:"#F984E5", marginBottom:12 }}>{accessError}</p>}
+          <button style={{ ...s.btn(), width:"100%", justifyContent:"center" }} onClick={checkAccess}>
+            Open de app →
+          </button>
+        </div>
+
+        <div style={{ fontSize:13, color:T.muted, marginBottom:16 }}>Nog geen toegang?</div>
+        <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20toegang%20tot%20de%20app%20Van%20Overleven%20naar%20Leven" target="_blank" rel="noopener noreferrer"
+          style={{ ...s.btn(T.dark, T.rose), border:"1px solid rgba(249,132,229,0.3)", width:"100%", justifyContent:"center", marginBottom:12 }}>
+          📱 Koop toegang via WhatsApp
+        </a>
+        <p style={{ fontSize:11, color:T.muted, marginTop:16, lineHeight:1.6 }}>Na betaling ontvang je direct je persoonlijke toegangscode.</p>
+      </div>
+    </div>
+  );
+
   // ── HERO ──
   if (screen === "hero") return (
     <div style={{ minHeight:"100svh", background:T.black, color:T.cream, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", textAlign:"center", padding:"80px 24px", position:"relative", overflow:"hidden" }}>
       <style>{G}</style>
-      <div style={{ position:"absolute", width:480, height:480, borderRadius:"50%", background:"radial-gradient(circle,rgba(194,127,160,0.13) 0%,transparent 65%)", top:"50%", left:"50%", animation:"glowPulse 6s ease-in-out infinite", pointerEvents:"none" }}/>
+      <div style={{ position:"absolute", width:480, height:480, borderRadius:"50%", background:"radial-gradient(circle,rgba(249,132,229,0.13) 0%,transparent 65%)", top:"50%", left:"50%", animation:"glowPulse 6s ease-in-out infinite", pointerEvents:"none" }}/>
       <div style={{ position:"relative", zIndex:2 }}>
         <span style={s.ey}>Open Your Mind Bewustzijn · Wendy van der Vecht</span>
         <h1 style={s.h1}>Van Overleven<br/><em style={s.em}>naar Leven</em></h1>
         <p style={{ ...s.mu, maxWidth:420, margin:"0 auto 36px" }}>Het programma dat jou helpt terug te keren naar jezelf — via je lichaam, niet via je hoofd.</p>
-        <button style={s.btn()} onClick={() => { setScreen("app"); scrollTop(); }}>Start het programma</button>
+        <button style={s.btn()} onClick={() => { setScreen("access"); scrollTop(); }}>Start het programma</button>
       </div>
     </div>
   );
@@ -397,6 +852,7 @@ export default function App() {
     { id:"selfie",  e:"📸", l:"Selfie" },
     { id:"voeding", e:"🥗", l:"Voeding" },
     { id:"logboek", e:"📓", l:"Dagboek" },
+    { id:"meer",    e:"✨", l:"Meer" },
   ];
 
   return (
@@ -405,7 +861,7 @@ export default function App() {
       <div ref={topRef}/>
 
       {/* NAV */}
-      <div style={{ position:"sticky", top:0, zIndex:50, background:"rgba(14,13,11,0.96)", backdropFilter:"blur(12px)", borderBottom:"1px solid rgba(194,127,160,0.1)", display:"flex", overflowX:"auto" }}>
+      <div style={{ position:"sticky", top:0, zIndex:50, background:"rgba(14,13,11,0.96)", backdropFilter:"blur(12px)", borderBottom:"1px solid rgba(249,132,229,0.1)", display:"flex", overflowX:"auto" }}>
         {TABS.map(t => (
           <button key={t.id} onClick={() => nav(t.id)}
             style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:2, padding:"10px 6px", background:"none", border:"none", cursor:"pointer", color: tab===t.id ? T.rose : T.muted, borderBottom:`2px solid ${tab===t.id ? T.rose : "transparent"}`, transition:"all 0.2s", flex:1, minWidth:44, flexShrink:0 }}>
@@ -417,13 +873,13 @@ export default function App() {
 
       {/* SOS */}
       <div style={{ position:"fixed", bottom:22, right:16, zIndex:100 }}>
-        <button onClick={() => setSos(true)} style={{ width:52, height:52, borderRadius:"50%", background:"rgba(160,82,122,0.9)", border:"2px solid rgba(194,127,160,0.4)", color:T.cream, fontSize:20, cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center", boxShadow:"0 4px 20px rgba(194,127,160,0.2)" }}>🆘</button>
+        <button onClick={() => setSos(true)} style={{ width:52, height:52, borderRadius:"50%", background:"rgba(160,82,122,0.9)", border:"2px solid rgba(249,132,229,0.4)", color:T.cream, fontSize:20, cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center", boxShadow:"0 4px 20px rgba(249,132,229,0.2)" }}>🆘</button>
       </div>
 
       {/* SOS MODAL */}
       {sos && (
         <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.88)", zIndex:200, display:"flex", alignItems:"center", justifyContent:"center", padding:20 }} onClick={() => setSos(false)}>
-          <div style={{ background:T.dark, borderRadius:18, padding:28, maxWidth:340, width:"100%", border:"1px solid rgba(194,127,160,0.2)" }} onClick={e => e.stopPropagation()}>
+          <div style={{ background:T.dark, borderRadius:18, padding:28, maxWidth:340, width:"100%", border:"1px solid rgba(249,132,229,0.2)" }} onClick={e => e.stopPropagation()}>
             <h3 style={{ ...s.h3, textAlign:"center", marginBottom:8 }}>Even stoppen 🌿</h3>
             <p style={{ ...s.mu, textAlign:"center", fontSize:13, marginBottom:22 }}>Wat heeft je lichaam op dit moment nodig?</p>
             <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
@@ -447,7 +903,7 @@ export default function App() {
               <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"2rem", color:T.gold }}>{streak}</div>
               <div style={{ fontSize:11, color:T.muted }}>dagen streak</div>
             </div>
-            <div style={s.card({ textAlign:"center", border:"1px solid rgba(194,127,160,0.25)" })}>
+            <div style={s.card({ textAlign:"center", border:"1px solid rgba(249,132,229,0.25)" })}>
               <div style={{ fontSize:26, marginBottom:4 }}>💪</div>
               <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"2rem", color:T.rose }}>{totalP}g</div>
               <div style={{ fontSize:11, color:T.muted }}>eiwitten vandaag</div>
@@ -476,7 +932,7 @@ export default function App() {
 
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:8 }}>
             {[["📚","Modules","modules"],["🌬","Adem","breath"],["🥗","Voeding","voeding"],["☀️","Check-in","checkin"]].map(([e,l,id]) => (
-              <button key={id} onClick={() => nav(id)} style={{ ...s.card({ cursor:"pointer", textAlign:"center", border:"1px solid rgba(194,127,160,0.1)" }) }}>
+              <button key={id} onClick={() => nav(id)} style={{ ...s.card({ cursor:"pointer", textAlign:"center", border:"1px solid rgba(249,132,229,0.1)" }) }}>
                 <div style={{ fontSize:22, marginBottom:6 }}>{e}</div>
                 <div style={{ fontSize:11, color:T.muted, letterSpacing:"0.08em", textTransform:"uppercase" }}>{l}</div>
               </button>
@@ -588,6 +1044,22 @@ export default function App() {
               <p style={{ ...s.mu, fontSize:13, marginTop:6 }}>Welverdiende rust. Jouw lichaam mag nu echt loslaten.</p>
             </div>
           )}
+
+          {/* OVERDAG ROUTINE */}
+          <div style={{ fontSize:11, letterSpacing:"0.2em", textTransform:"uppercase", color:"#E8A44A", margin:"36px 0 10px" }}>☀️ Overdag routine — {dPct}%</div>
+          <ProgBar value={dPct} color="#E8A44A"/>
+          <div style={{ marginTop:16 }}>
+            {MIDDAY.map(item => (
+              <CheckRow key={item.id} item={item} checked={!!dDone[item.id]} onToggle={() => setDDone(p => ({ ...p, [item.id]: !p[item.id] }))}/>
+            ))}
+          </div>
+          {dPct === 100 && (
+            <div style={s.card({ textAlign:"center", border:"1px solid rgba(232,164,74,0.3)", marginTop:16 })}>
+              <div style={{ fontSize:28, marginBottom:6 }}>☀️</div>
+              <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", color:"#E8A44A" }}>Overdag routine voltooid!</p>
+              <p style={{ ...s.mu, fontSize:13, marginTop:6 }}>Jouw lichaam heeft midden op de dag de aandacht gekregen die het verdient.</p>
+            </div>
+          )}
         </div>
       )}
 
@@ -631,7 +1103,7 @@ export default function App() {
           <p style={{ ...s.mu, marginBottom:24 }}>Maak dagelijks een selfie op hetzelfde tijdstip. Na een paar weken zie je het verschil — meer rust, minder spanning in je gezicht.</p>
 
           {/* Upload */}
-          <div style={s.card({ textAlign:"center", border:"1px solid rgba(194,127,160,0.2)", marginBottom:20, padding:"28px 18px" })}>
+          <div style={s.card({ textAlign:"center", border:"1px solid rgba(249,132,229,0.2)", marginBottom:20, padding:"28px 18px" })}>
             <div style={{ fontSize:44, marginBottom:12 }}>📸</div>
             <h3 style={{ ...s.h3, marginBottom:8 }}>Selfie van vandaag</h3>
             <p style={{ ...s.mu, fontSize:13, marginBottom:20 }}>Zelfde licht, zelfde hoek, zelfde uitdrukking. Laat je schouders zakken voor de foto.</p>
@@ -670,7 +1142,7 @@ export default function App() {
               </div>
               <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:8, marginBottom:20 }}>
                 {Object.values(selfies).sort((a,b) => b.date > a.date ? 1 : -1).map((sf, i) => (
-                  <div key={i} style={{ position:"relative", aspectRatio:"3/4", borderRadius:11, overflow:"hidden", border:"1px solid rgba(194,127,160,0.15)" }}>
+                  <div key={i} style={{ position:"relative", aspectRatio:"3/4", borderRadius:11, overflow:"hidden", border:"1px solid rgba(249,132,229,0.15)" }}>
                     <img src={sf.src} alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }}/>
                     <div style={{ position:"absolute", bottom:0, left:0, right:0, background:"linear-gradient(transparent,rgba(14,13,11,0.8))", padding:"8px 8px 6px" }}>
                       <div style={{ fontSize:10, color:T.cream }}>{sf.date}</div>
@@ -727,7 +1199,7 @@ export default function App() {
               const n = pLog.filter(x => x === food.name).length;
               return (
                 <button key={food.name} onClick={() => setPLog(p => [...p, food.name])}
-                  style={{ ...s.card({ cursor:"pointer", textAlign:"left", padding:"12px 12px", border:`1px solid ${n>0?"rgba(201,169,110,0.35)":"rgba(194,127,160,0.08)"}`, background:n>0?"rgba(201,169,110,0.06)":T.dark }) }}>
+                  style={{ ...s.card({ cursor:"pointer", textAlign:"left", padding:"12px 12px", border:`1px solid ${n>0?"rgba(201,169,110,0.35)":"rgba(249,132,229,0.08)"}`, background:n>0?"rgba(201,169,110,0.06)":T.dark }) }}>
                   <div style={{ fontSize:18, marginBottom:3 }}>{food.emoji}</div>
                   <div style={{ fontSize:12, color:T.cream, lineHeight:1.3, marginBottom:2 }}>{food.name}</div>
                   <div style={{ fontSize:11, color:T.gold }}>{food.p}g eiwit {n > 0 ? `· ×${n}` : ""}</div>
@@ -737,7 +1209,7 @@ export default function App() {
           </div>
           {pLog.length > 0 && <button style={{ ...s.sm, marginBottom:20 }} onClick={() => setPLog([])}>Log wissen</button>}
 
-          <div style={s.card({ border:"1px solid rgba(194,127,160,0.15)" })}>
+          <div style={s.card({ border:"1px solid rgba(249,132,229,0.15)" })}>
             <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:10 }}>🌅 Ochtend mineraaldrankje</div>
             <p style={{ ...s.mu, fontSize:14 }}>Groot glas water + snufje Keltisch zeezout + vers citroensap. Rustig opdrinken. Dan 60 minuten wachten met koffie. Je lichaam krijgt meteen wat het nodig heeft.</p>
           </div>
@@ -752,7 +1224,7 @@ export default function App() {
           <p style={{ ...s.mu, marginBottom:28 }}>Vul dit dagelijks in. Vanuit gevoel, niet vanuit je hoofd. Aan het einde krijg je een persoonlijke uitslag én sla je alles op in je logboek.</p>
 
           {/* ── CHECK-IN VRAGEN ── */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:16, paddingBottom:10, borderBottom:"1px solid rgba(194,127,160,0.12)" }}>☀️ Daily Check-in</div>
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:16, paddingBottom:10, borderBottom:"1px solid rgba(249,132,229,0.12)" }}>☀️ Daily Check-in</div>
 
           {[
             { id:"gevoel", label:"Hoe voel je je vandaag?", opts:["Uitgeput en leeg","Overprikkeld en gespannen","Onrustig en opgejaagd","Redelijk in balans","Rustig, veilig en verbonden"], sc:[4,3,3,1,0] },
@@ -760,7 +1232,7 @@ export default function App() {
             { id:"energie", label:"Vanuit welke energie leef ik vandaag?", opts:["Overleven","Controleren","Aanpassen","Pleasen","Doorzetten","Vertragen","Vertrouwen","Ontvangen","Vanuit flow"], sc:[4,3,3,3,2,1,0,0,0] },
           ].map(q => (
             <div key={q.id} style={{ marginBottom:20 }}>
-              <div style={{ fontSize:11, fontWeight:500, letterSpacing:"0.15em", textTransform:"uppercase", color:T.muted, marginBottom:10 }}>{q.label}</div>
+              <div style={{ fontSize:11, fontWeight:500, letterSpacing:"0.15em", textTransform:"uppercase", color:T.rose, marginBottom:10 }}>{q.label}</div>
               {q.opts.map((opt, i) => {
                 const sel = ciData[q.id] === i;
                 return (
@@ -781,7 +1253,7 @@ export default function App() {
                 const sel = (logForm.body || []).includes(tag);
                 return (
                   <button key={tag} onClick={() => setLogForm(p => ({ ...p, body: sel ? p.body.filter(x=>x!==tag) : [...(p.body||[]),tag] }))}
-                    style={{ padding:"7px 13px", borderRadius:50, fontSize:12, cursor:"pointer", border:`1px solid ${sel?"rgba(194,127,160,0.45)":"rgba(194,127,160,0.1)"}`, background:sel?"rgba(194,127,160,0.12)":"transparent", color:sel?T.rose:T.muted }}>
+                    style={{ padding:"7px 13px", borderRadius:50, fontSize:12, cursor:"pointer", border:`1px solid ${sel?"rgba(249,132,229,0.45)":"rgba(249,132,229,0.1)"}`, background:sel?"rgba(249,132,229,0.12)":"transparent", color:sel?T.rose:T.muted }}>
                     {tag}
                   </button>
                 );
@@ -796,22 +1268,22 @@ export default function App() {
             { id:"q3", label:"Welke kleine stap kan ik nu zetten?" },
           ].map(q => (
             <div key={q.id} style={{ marginBottom:14 }}>
-              <div style={{ fontSize:11, color:T.muted, letterSpacing:"0.12em", textTransform:"uppercase", marginBottom:7 }}>{q.label}</div>
+              <div style={{ fontSize:11, color:T.rose, letterSpacing:"0.12em", textTransform:"uppercase", marginBottom:7 }}>{q.label}</div>
               <textarea style={s.ta} placeholder="..." value={ciData[q.id] || ""}
                 onChange={e => setCiData(p => ({ ...p, [q.id]:e.target.value }))}/>
             </div>
           ))}
 
           {/* ── LOGBOEK VELDEN ── */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", margin:"28px 0 16px", paddingBottom:10, borderBottom:"1px solid rgba(194,127,160,0.12)" }}>📓 Logboek</div>
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", margin:"28px 0 16px", paddingBottom:10, borderBottom:"1px solid rgba(249,132,229,0.12)" }}>📓 Logboek</div>
 
           {/* Stemming */}
           <div style={{ marginBottom:18 }}>
-            <div style={{ fontSize:11, color:T.muted, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:10 }}>Algemene stemming</div>
+            <div style={{ fontSize:11, color:T.rose, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:10 }}>Algemene stemming</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
               {[["😔","Zwaar"],["😟","Gespannen"],["😐","Neutraal"],["🙂","Oké"],["😊","Goed"],["✨","Stralend"]].map(([e,l]) => (
                 <button key={l} onClick={() => setLogForm(p => ({ ...p, mood:`${e} ${l}` }))}
-                  style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:3, padding:"10px 10px", borderRadius:10, border:`1px solid ${logForm.mood===`${e} ${l}`?"rgba(194,127,160,0.5)":"rgba(194,127,160,0.1)"}`, background:logForm.mood===`${e} ${l}`?"rgba(194,127,160,0.12)":"transparent", cursor:"pointer" }}>
+                  style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:3, padding:"10px 10px", borderRadius:10, border:`1px solid ${logForm.mood===`${e} ${l}`?"rgba(249,132,229,0.5)":"rgba(249,132,229,0.1)"}`, background:logForm.mood===`${e} ${l}`?"rgba(249,132,229,0.12)":"transparent", cursor:"pointer" }}>
                   <span style={{ fontSize:22 }}>{e}</span>
                   <span style={{ fontSize:10, color:T.muted }}>{l}</span>
                 </button>
@@ -821,11 +1293,11 @@ export default function App() {
 
           {/* Energie */}
           <div style={{ marginBottom:18 }}>
-            <div style={{ fontSize:11, color:T.muted, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:10 }}>Energieniveau</div>
+            <div style={{ fontSize:11, color:T.rose, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:10 }}>Energieniveau</div>
             <div style={{ display:"flex", gap:6 }}>
               {[["⚡⚡⚡","Hoog"],["⚡⚡","Midden"],["⚡","Laag"],["💤","Uitgeput"]].map(([e,l]) => (
                 <button key={l} onClick={() => setLogForm(p => ({ ...p, energy:`${e} ${l}` }))}
-                  style={{ flex:1, padding:"10px 4px", borderRadius:10, textAlign:"center", border:`1px solid ${logForm.energy===`${e} ${l}`?"rgba(201,169,110,0.5)":"rgba(194,127,160,0.1)"}`, background:logForm.energy===`${e} ${l}`?"rgba(201,169,110,0.1)":"transparent", cursor:"pointer" }}>
+                  style={{ flex:1, padding:"10px 4px", borderRadius:10, textAlign:"center", border:`1px solid ${logForm.energy===`${e} ${l}`?"rgba(201,169,110,0.5)":"rgba(249,132,229,0.1)"}`, background:logForm.energy===`${e} ${l}`?"rgba(201,169,110,0.1)":"transparent", cursor:"pointer" }}>
                   <div style={{ fontSize:14 }}>{e}</div>
                   <div style={{ fontSize:10, color:T.muted, marginTop:2 }}>{l}</div>
                 </button>
@@ -852,7 +1324,7 @@ export default function App() {
           </div>
 
           {/* Routine samenvatting */}
-          <div style={{ display:"flex", gap:12, marginBottom:22, padding:"12px 14px", background:"rgba(194,127,160,0.05)", borderRadius:10 }}>
+          <div style={{ display:"flex", gap:12, marginBottom:22, padding:"12px 14px", background:"rgba(249,132,229,0.05)", borderRadius:10 }}>
             <div style={{ fontSize:12, color:T.muted }}>🌅 Ochtend: <span style={{ color:T.gold }}>{mPct}%</span></div>
             <div style={{ fontSize:12, color:T.muted }}>🌙 Avond: <span style={{ color:T.mauve }}>{ePct}%</span></div>
             <div style={{ fontSize:12, color:T.muted }}>💪 Eiwit: <span style={{ color:T.gold }}>{totalP}g</span></div>
@@ -903,7 +1375,7 @@ export default function App() {
           {/* UITSLAG */}
           {ciResult && (
             <div id="dagres" style={{ marginTop:40 }} className="fu">
-              <div style={{ width:36, height:1, background:"rgba(194,127,160,0.2)", margin:"0 auto 28px" }}/>
+              <div style={{ width:36, height:1, background:"rgba(249,132,229,0.2)", margin:"0 auto 28px" }}/>
               <div style={{ display:"inline-block", background:`${ciResult.color}18`, border:`1px solid ${ciResult.color}33`, borderRadius:50, padding:"5px 16px", fontSize:11, letterSpacing:"0.15em", textTransform:"uppercase", color:ciResult.color, marginBottom:14 }}>{ciResult.label}</div>
               <h3 style={s.h3}>{ciResult.title}</h3>
               <p style={{ ...s.mu, marginBottom:22 }}>{ciResult.body}</p>
@@ -914,7 +1386,7 @@ export default function App() {
                   <p style={{ ...s.mu, fontSize:14 }}>{b}</p>
                 </div>
               ))}
-              <div style={s.card({ textAlign:"center", border:"1px solid rgba(194,127,160,0.18)", marginTop:8 })}>
+              <div style={s.card({ textAlign:"center", border:"1px solid rgba(249,132,229,0.18)", marginTop:8 })}>
                 <p style={{ ...s.mu, fontSize:14, marginBottom:16 }}>Op dagen zoals vandaag hoef je het niet alleen te dragen.</p>
                 <a href={`https://wa.me/31649396207?text=${encodeURIComponent("Hoi Wendy, ik heb mijn dagboek ingevuld en heb ondersteuning nodig")}`} target="_blank" rel="noopener noreferrer" style={s.btn()}>📱 Stuur Wendy een berichtje</a>
               </div>
@@ -924,11 +1396,11 @@ export default function App() {
           {/* LOGBOEK GESCHIEDENIS */}
           {logList.length > 0 && (
             <div style={{ marginTop:48 }}>
-              <div style={{ width:36, height:1, background:"rgba(194,127,160,0.2)", margin:"0 auto 32px" }}/>
+              <div style={{ width:36, height:1, background:"rgba(249,132,229,0.2)", margin:"0 auto 32px" }}/>
 
               {/* Stemmingsgrafiek */}
               {logList.length >= 3 && (
-                <div style={s.card({ marginBottom:20, border:"1px solid rgba(194,127,160,0.15)" })}>
+                <div style={s.card({ marginBottom:20, border:"1px solid rgba(249,132,229,0.15)" })}>
                   <div style={{ fontSize:11, color:T.rose, letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:14 }}>Stemming de laatste dagen</div>
                   <div style={{ display:"flex", gap:6, alignItems:"flex-end", height:52 }}>
                     {logList.slice(0,7).reverse().map((entry, i) => {
@@ -957,7 +1429,7 @@ export default function App() {
                   </div>
                   {entry.body?.length > 0 && (
                     <div style={{ display:"flex", gap:5, flexWrap:"wrap", marginBottom:8 }}>
-                      {entry.body.map(b => <span key={b} style={{ fontSize:10, background:"rgba(194,127,160,0.1)", color:T.rose, padding:"2px 9px", borderRadius:50 }}>{b}</span>)}
+                      {entry.body.map(b => <span key={b} style={{ fontSize:10, background:"rgba(249,132,229,0.1)", color:T.rose, padding:"2px 9px", borderRadius:50 }}>{b}</span>)}
                     </div>
                   )}
                   {entry.gevoel && <div style={{ fontSize:12, color:T.muted, marginBottom:6 }}>Gevoel: {entry.gevoel}</div>}
@@ -965,7 +1437,7 @@ export default function App() {
                   {entry.note && <p style={{ fontSize:13, color:T.muted, lineHeight:1.65, marginBottom:7 }}>{entry.note}</p>}
                   {entry.q1 && <p style={{ fontSize:12, color:T.muted, fontStyle:"italic", marginBottom:5 }}>"{entry.q1}"</p>}
                   {entry.gratitude && <div style={{ marginTop:4 }}><span style={{ fontSize:11, color:T.rose }}>🌸 </span><span style={{ fontSize:13, color:T.muted, fontStyle:"italic" }}>{entry.gratitude}</span></div>}
-                  <div style={{ display:"flex", gap:12, marginTop:10, paddingTop:10, borderTop:"1px solid rgba(194,127,160,0.08)", fontSize:11, color:T.muted }}>
+                  <div style={{ display:"flex", gap:12, marginTop:10, paddingTop:10, borderTop:"1px solid rgba(249,132,229,0.08)", fontSize:11, color:T.muted }}>
                     <span>🌅 {entry.mPct}%</span>
                     <span>🌙 {entry.ePct}%</span>
                     <span>💪 {entry.protein}g</span>
@@ -974,6 +1446,100 @@ export default function App() {
               ))}
             </div>
           )}
+        </div>
+      )}
+
+      {/* ═══ MEER ═══ */}
+      {tab === "meer" && (
+        <div style={s.wrap} className="fu">
+          <span style={s.ey}>Extra tools & support</span>
+          <h2 style={s.h2}>Alles wat je<br/><em style={s.em}>ondersteunt</em></h2>
+
+          {/* Hydratatie tracker */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>💧 Hydratatie vandaag</div>
+          <div style={s.card({ border:"1px solid rgba(107,159,196,0.3)", marginBottom:28 })}>
+            <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16 }}>
+              <div>
+                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"2.5rem", color:"#6B9FC4", lineHeight:1 }}>{water}</div>
+                <div style={{ fontSize:11, color:T.muted }}>van 8 glazen</div>
+              </div>
+              <div style={{ display:"flex", gap:8 }}>
+                <button style={s.btn("#6B9FC4")} onClick={() => setWater(w => Math.min(w+1, 8))}>+ Glas</button>
+                {water > 0 && <button style={s.sm} onClick={() => setWater(w => Math.max(w-1, 0))}>−</button>}
+              </div>
+            </div>
+            <div style={{ display:"flex", gap:6 }}>
+              {Array.from({length:8}).map((_,i) => (
+                <div key={i} style={{ flex:1, height:32, borderRadius:6, background: i < water ? "#6B9FC4" : "rgba(107,159,196,0.1)", border:"1px solid rgba(107,159,196,0.2)", transition:"background 0.3s", cursor:"pointer" }} onClick={() => setWater(i+1)}/>
+              ))}
+            </div>
+            {water >= 8 && <p style={{ fontSize:13, color:"#6B9FC4", marginTop:12, textAlign:"center" }}>🎉 Dagdoel gehaald! Jouw lichaam dankt je.</p>}
+            {water < 3 && water > 0 && <p style={{ fontSize:12, color:T.muted, marginTop:10 }}>Tip: drink een glas water voor je volgende maaltijd.</p>}
+          </div>
+
+          {/* Wendy's tip van de week */}
+          {wendyTip && (
+            <>
+              <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🌸 Wendy's tip van de week</div>
+              <div style={s.card({ border:`1px solid ${T.rose}25`, marginBottom:28, position:"relative" })}>
+                <button onClick={() => setWendyTip(false)} style={{ position:"absolute", top:12, right:12, background:"none", border:"none", color:T.muted, cursor:"pointer", fontSize:16 }}>×</button>
+                <div style={{ display:"flex", gap:14, alignItems:"flex-start" }}>
+                  <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
+                  <div>
+                    <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
+                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw — dat verandert meer dan je denkt."</p>
+                    <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* Sessie inplannen */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>📅 Sessie inplannen bij Wendy</div>
+          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:28 })}>
+            <p style={{ ...s.mu, fontSize:14, marginBottom:20 }}>Klaar voor een persoonlijke begeleiding? Plan een TRE of BRTT sessie in met Wendy.</p>
+            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+              <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20een%20sessie%20inplannen" target="_blank" rel="noopener noreferrer" style={s.btn()}>
+                📱 Plan via WhatsApp
+              </a>
+              <a href="https://www.oymb.nl" target="_blank" rel="noopener noreferrer" style={{ ...s.btn(T.dark, T.rose), border:`1px solid ${T.rose}30`, justifyContent:"center" }}>
+                🌐 Bekijk oymb.nl
+              </a>
+            </div>
+          </div>
+
+          {/* Voortgangsbadges */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🏆 Jouw badges</div>
+          <div style={s.card({ marginBottom:28 })}>
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:12 }}>
+              {[
+                { emoji:"🌱", label:"Gestart", earned: true },
+                { emoji:"🔥", label:`${streak} dagen`, earned: streak >= 1 },
+                { emoji:"💪", label:"Eiwitten", earned: totalP >= 50 },
+                { emoji:"💧", label:"Hydratatie", earned: water >= 8 },
+                { emoji:"🌅", label:"Ochtend ✓", earned: mPct === 100 },
+                { emoji:"🌙", label:"Avond ✓", earned: ePct === 100 },
+                { emoji:"📸", label:"Selfie", earned: Object.keys(selfies).length >= 1 },
+                { emoji:"📚", label:"Module 1", earned: !!modDone[1] },
+              ].map((badge, i) => (
+                <div key={i} style={{ textAlign:"center", opacity: badge.earned ? 1 : 0.25 }}>
+                  <div style={{ fontSize:28, marginBottom:4, filter: badge.earned ? "none" : "grayscale(100%)" }}>{badge.emoji}</div>
+                  <div style={{ fontSize:9, color: badge.earned ? T.rose : T.muted, letterSpacing:"0.05em" }}>{badge.label}</div>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize:11, color:T.muted, textAlign:"center", marginTop:16 }}>Verdien badges door de app dagelijks te gebruiken 🌸</p>
+          </div>
+
+          {/* Community */}
+          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>👥 Community</div>
+          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:16 })}>
+            <p style={{ ...s.mu, fontSize:14, marginBottom:16 }}>Doe mee met de community van vrouwen die hetzelfde doorlopen. Deel je ervaringen, stel vragen en inspireer elkaar.</p>
+            <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20lid%20worden%20van%20de%20community" target="_blank" rel="noopener noreferrer" style={s.btn()}>
+              🌸 Word lid van de community
+            </a>
+          </div>
         </div>
       )}
 
