@@ -226,98 +226,6 @@ function CheckRow({ item, checked, onToggle }) {
       </div>
       {sp && <span style={{ position:"absolute", right:10, fontSize:16, color:T.rose, animation:"spark 0.7s ease-out forwards" }}>✦</span>}
       {/* ═══ MEER ═══ */}
-      {tab === "meer" && (
-        <div style={s.wrap} className="fu">
-          <span style={s.ey}>Extra tools & support</span>
-          <h2 style={s.h2}>Alles wat je<br/><em style={s.em}>ondersteunt</em></h2>
-
-          {/* Hydratatie tracker */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>💧 Hydratatie vandaag</div>
-          <div style={s.card({ border:"1px solid rgba(107,159,196,0.3)", marginBottom:28 })}>
-            <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16 }}>
-              <div>
-                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"2.5rem", color:"#6B9FC4", lineHeight:1 }}>{water}</div>
-                <div style={{ fontSize:11, color:T.muted }}>van 8 glazen</div>
-              </div>
-              <div style={{ display:"flex", gap:8 }}>
-                <button style={s.btn("#6B9FC4")} onClick={() => setWater(w => Math.min(w+1, 8))}>+ Glas</button>
-                {water > 0 && <button style={s.sm} onClick={() => setWater(w => Math.max(w-1, 0))}>−</button>}
-              </div>
-            </div>
-            <div style={{ display:"flex", gap:6 }}>
-              {Array.from({length:8}).map((_,i) => (
-                <div key={i} style={{ flex:1, height:32, borderRadius:6, background: i < water ? "#6B9FC4" : "rgba(107,159,196,0.1)", border:"1px solid rgba(107,159,196,0.2)", transition:"background 0.3s", cursor:"pointer" }} onClick={() => setWater(i+1)}/>
-              ))}
-            </div>
-            {water >= 8 && <p style={{ fontSize:13, color:"#6B9FC4", marginTop:12, textAlign:"center" }}>🎉 Dagdoel gehaald! Jouw lichaam dankt je.</p>}
-            {water < 3 && water > 0 && <p style={{ fontSize:12, color:T.muted, marginTop:10 }}>Tip: drink een glas water voor je volgende maaltijd.</p>}
-          </div>
-
-          {/* Wendy's tip van de week */}
-          {wendyTip && (
-            <>
-              <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🌸 Wendy's tip van de week</div>
-              <div style={s.card({ border:`1px solid ${T.rose}25`, marginBottom:28, position:"relative" })}>
-                <button onClick={() => setWendyTip(false)} style={{ position:"absolute", top:12, right:12, background:"none", border:"none", color:T.muted, cursor:"pointer", fontSize:16 }}>×</button>
-                <div style={{ display:"flex", gap:14, alignItems:"flex-start" }}>
-                  <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
-                  <div>
-                    <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
-                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw -- dat verandert meer dan je denkt."</p>
-                    <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* Sessie inplannen */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>📅 Sessie inplannen bij Wendy</div>
-          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:28 })}>
-            <p style={{ ...s.mu, fontSize:14, marginBottom:20 }}>Klaar voor een persoonlijke begeleiding? Plan een TRE of BRTT sessie in met Wendy.</p>
-            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
-              <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20een%20sessie%20inplannen" target="_blank" rel="noopener noreferrer" style={s.btn()}>
-                📱 Plan via WhatsApp
-              </a>
-              <a href="https://www.oymb.nl" target="_blank" rel="noopener noreferrer" style={{ ...s.btn(T.dark, T.rose), border:`1px solid ${T.rose}30`, justifyContent:"center" }}>
-                🌐 Bekijk oymb.nl
-              </a>
-            </div>
-          </div>
-
-          {/* Voortgangsbadges */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🏆 Jouw badges</div>
-          <div style={s.card({ marginBottom:28 })}>
-            <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:12 }}>
-              {[
-                { emoji:"🌱", label:"Gestart", earned: true },
-                { emoji:"🔥", label:`${streak} dagen`, earned: streak >= 1 },
-                { emoji:"💪", label:"Eiwitten", earned: totalP >= 50 },
-                { emoji:"💧", label:"Hydratatie", earned: water >= 8 },
-                { emoji:"🌅", label:"Ochtend ✓", earned: mPct === 100 },
-                { emoji:"🌙", label:"Avond ✓", earned: ePct === 100 },
-                { emoji:"📸", label:"Selfie", earned: Object.keys(selfies).length >= 1 },
-                { emoji:"📚", label:"Module 1", earned: !!modDone[1] },
-              ].map((badge, i) => (
-                <div key={i} style={{ textAlign:"center", opacity: badge.earned ? 1 : 0.25 }}>
-                  <div style={{ fontSize:28, marginBottom:4, filter: badge.earned ? "none" : "grayscale(100%)" }}>{badge.emoji}</div>
-                  <div style={{ fontSize:9, color: badge.earned ? T.rose : T.muted, letterSpacing:"0.05em" }}>{badge.label}</div>
-                </div>
-              ))}
-            </div>
-            <p style={{ fontSize:11, color:T.muted, textAlign:"center", marginTop:16 }}>Verdien badges door de app dagelijks te gebruiken 🌸</p>
-          </div>
-
-          {/* Community */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>👥 Community</div>
-          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:16 })}>
-            <p style={{ ...s.mu, fontSize:14, marginBottom:16 }}>Doe mee met de community van vrouwen die hetzelfde doorlopen. Deel je ervaringen, stel vragen en inspireer elkaar.</p>
-            <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20lid%20worden%20van%20de%20community" target="_blank" rel="noopener noreferrer" style={s.btn()}>
-              🌸 Word lid van de community
-            </a>
-          </div>
-        </div>
-      )}
 
     </div>
   );
@@ -328,98 +236,6 @@ function ProgBar({ value, color=T.rose }) {
     <div style={{ height:3, background:"rgba(249,132,229,0.12)", borderRadius:50, overflow:"hidden" }}>
       <div style={{ height:"100%", width:`${value}%`, background:color, borderRadius:50, transition:"width 0.4s ease" }}/>
       {/* ═══ MEER ═══ */}
-      {tab === "meer" && (
-        <div style={s.wrap} className="fu">
-          <span style={s.ey}>Extra tools & support</span>
-          <h2 style={s.h2}>Alles wat je<br/><em style={s.em}>ondersteunt</em></h2>
-
-          {/* Hydratatie tracker */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>💧 Hydratatie vandaag</div>
-          <div style={s.card({ border:"1px solid rgba(107,159,196,0.3)", marginBottom:28 })}>
-            <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16 }}>
-              <div>
-                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"2.5rem", color:"#6B9FC4", lineHeight:1 }}>{water}</div>
-                <div style={{ fontSize:11, color:T.muted }}>van 8 glazen</div>
-              </div>
-              <div style={{ display:"flex", gap:8 }}>
-                <button style={s.btn("#6B9FC4")} onClick={() => setWater(w => Math.min(w+1, 8))}>+ Glas</button>
-                {water > 0 && <button style={s.sm} onClick={() => setWater(w => Math.max(w-1, 0))}>−</button>}
-              </div>
-            </div>
-            <div style={{ display:"flex", gap:6 }}>
-              {Array.from({length:8}).map((_,i) => (
-                <div key={i} style={{ flex:1, height:32, borderRadius:6, background: i < water ? "#6B9FC4" : "rgba(107,159,196,0.1)", border:"1px solid rgba(107,159,196,0.2)", transition:"background 0.3s", cursor:"pointer" }} onClick={() => setWater(i+1)}/>
-              ))}
-            </div>
-            {water >= 8 && <p style={{ fontSize:13, color:"#6B9FC4", marginTop:12, textAlign:"center" }}>🎉 Dagdoel gehaald! Jouw lichaam dankt je.</p>}
-            {water < 3 && water > 0 && <p style={{ fontSize:12, color:T.muted, marginTop:10 }}>Tip: drink een glas water voor je volgende maaltijd.</p>}
-          </div>
-
-          {/* Wendy's tip van de week */}
-          {wendyTip && (
-            <>
-              <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🌸 Wendy's tip van de week</div>
-              <div style={s.card({ border:`1px solid ${T.rose}25`, marginBottom:28, position:"relative" })}>
-                <button onClick={() => setWendyTip(false)} style={{ position:"absolute", top:12, right:12, background:"none", border:"none", color:T.muted, cursor:"pointer", fontSize:16 }}>×</button>
-                <div style={{ display:"flex", gap:14, alignItems:"flex-start" }}>
-                  <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
-                  <div>
-                    <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
-                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw -- dat verandert meer dan je denkt."</p>
-                    <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* Sessie inplannen */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>📅 Sessie inplannen bij Wendy</div>
-          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:28 })}>
-            <p style={{ ...s.mu, fontSize:14, marginBottom:20 }}>Klaar voor een persoonlijke begeleiding? Plan een TRE of BRTT sessie in met Wendy.</p>
-            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
-              <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20een%20sessie%20inplannen" target="_blank" rel="noopener noreferrer" style={s.btn()}>
-                📱 Plan via WhatsApp
-              </a>
-              <a href="https://www.oymb.nl" target="_blank" rel="noopener noreferrer" style={{ ...s.btn(T.dark, T.rose), border:`1px solid ${T.rose}30`, justifyContent:"center" }}>
-                🌐 Bekijk oymb.nl
-              </a>
-            </div>
-          </div>
-
-          {/* Voortgangsbadges */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🏆 Jouw badges</div>
-          <div style={s.card({ marginBottom:28 })}>
-            <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:12 }}>
-              {[
-                { emoji:"🌱", label:"Gestart", earned: true },
-                { emoji:"🔥", label:`${streak} dagen`, earned: streak >= 1 },
-                { emoji:"💪", label:"Eiwitten", earned: totalP >= 50 },
-                { emoji:"💧", label:"Hydratatie", earned: water >= 8 },
-                { emoji:"🌅", label:"Ochtend ✓", earned: mPct === 100 },
-                { emoji:"🌙", label:"Avond ✓", earned: ePct === 100 },
-                { emoji:"📸", label:"Selfie", earned: Object.keys(selfies).length >= 1 },
-                { emoji:"📚", label:"Module 1", earned: !!modDone[1] },
-              ].map((badge, i) => (
-                <div key={i} style={{ textAlign:"center", opacity: badge.earned ? 1 : 0.25 }}>
-                  <div style={{ fontSize:28, marginBottom:4, filter: badge.earned ? "none" : "grayscale(100%)" }}>{badge.emoji}</div>
-                  <div style={{ fontSize:9, color: badge.earned ? T.rose : T.muted, letterSpacing:"0.05em" }}>{badge.label}</div>
-                </div>
-              ))}
-            </div>
-            <p style={{ fontSize:11, color:T.muted, textAlign:"center", marginTop:16 }}>Verdien badges door de app dagelijks te gebruiken 🌸</p>
-          </div>
-
-          {/* Community */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>👥 Community</div>
-          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:16 })}>
-            <p style={{ ...s.mu, fontSize:14, marginBottom:16 }}>Doe mee met de community van vrouwen die hetzelfde doorlopen. Deel je ervaringen, stel vragen en inspireer elkaar.</p>
-            <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20lid%20worden%20van%20de%20community" target="_blank" rel="noopener noreferrer" style={s.btn()}>
-              🌸 Word lid van de community
-            </a>
-          </div>
-        </div>
-      )}
 
     </div>
   );
@@ -557,104 +373,26 @@ function BreathTimer({ ex }) {
         <button style={s.sm} onClick={reset}>Reset</button>
       </div>
       {/* ═══ MEER ═══ */}
-      {tab === "meer" && (
-        <div style={s.wrap} className="fu">
-          <span style={s.ey}>Extra tools & support</span>
-          <h2 style={s.h2}>Alles wat je<br/><em style={s.em}>ondersteunt</em></h2>
-
-          {/* Hydratatie tracker */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>💧 Hydratatie vandaag</div>
-          <div style={s.card({ border:"1px solid rgba(107,159,196,0.3)", marginBottom:28 })}>
-            <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16 }}>
-              <div>
-                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"2.5rem", color:"#6B9FC4", lineHeight:1 }}>{water}</div>
-                <div style={{ fontSize:11, color:T.muted }}>van 8 glazen</div>
-              </div>
-              <div style={{ display:"flex", gap:8 }}>
-                <button style={s.btn("#6B9FC4")} onClick={() => setWater(w => Math.min(w+1, 8))}>+ Glas</button>
-                {water > 0 && <button style={s.sm} onClick={() => setWater(w => Math.max(w-1, 0))}>−</button>}
-              </div>
-            </div>
-            <div style={{ display:"flex", gap:6 }}>
-              {Array.from({length:8}).map((_,i) => (
-                <div key={i} style={{ flex:1, height:32, borderRadius:6, background: i < water ? "#6B9FC4" : "rgba(107,159,196,0.1)", border:"1px solid rgba(107,159,196,0.2)", transition:"background 0.3s", cursor:"pointer" }} onClick={() => setWater(i+1)}/>
-              ))}
-            </div>
-            {water >= 8 && <p style={{ fontSize:13, color:"#6B9FC4", marginTop:12, textAlign:"center" }}>🎉 Dagdoel gehaald! Jouw lichaam dankt je.</p>}
-            {water < 3 && water > 0 && <p style={{ fontSize:12, color:T.muted, marginTop:10 }}>Tip: drink een glas water voor je volgende maaltijd.</p>}
-          </div>
-
-          {/* Wendy's tip van de week */}
-          {wendyTip && (
-            <>
-              <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🌸 Wendy's tip van de week</div>
-              <div style={s.card({ border:`1px solid ${T.rose}25`, marginBottom:28, position:"relative" })}>
-                <button onClick={() => setWendyTip(false)} style={{ position:"absolute", top:12, right:12, background:"none", border:"none", color:T.muted, cursor:"pointer", fontSize:16 }}>×</button>
-                <div style={{ display:"flex", gap:14, alignItems:"flex-start" }}>
-                  <div style={{ width:44, height:44, borderRadius:"50%", background:`${T.rose}20`, border:`2px solid ${T.rose}40`, display:"flex", alignItems:"center", justifyContent:"center", fontSize:20, flexShrink:0 }}>🌸</div>
-                  <div>
-                    <div style={{ fontSize:13, color:T.rose, letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:8 }}>Deze week van Wendy</div>
-                    <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"1.1rem", fontStyle:"italic", color:T.cream, lineHeight:1.65, marginBottom:10 }}>"Jouw lichaam heeft geen perfecte routine nodig. Het heeft consistentie nodig. Eén kleine oefening, elke dag opnieuw -- dat verandert meer dan je denkt."</p>
-                    <p style={{ fontSize:12, color:T.muted }}>Probeer deze week: elke ochtend 5 diepe ademhalingen voordat je je telefoon pakt.</p>
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* Sessie inplannen */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>📅 Sessie inplannen bij Wendy</div>
-          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:28 })}>
-            <p style={{ ...s.mu, fontSize:14, marginBottom:20 }}>Klaar voor een persoonlijke begeleiding? Plan een TRE of BRTT sessie in met Wendy.</p>
-            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
-              <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20een%20sessie%20inplannen" target="_blank" rel="noopener noreferrer" style={s.btn()}>
-                📱 Plan via WhatsApp
-              </a>
-              <a href="https://www.oymb.nl" target="_blank" rel="noopener noreferrer" style={{ ...s.btn(T.dark, T.rose), border:`1px solid ${T.rose}30`, justifyContent:"center" }}>
-                🌐 Bekijk oymb.nl
-              </a>
-            </div>
-          </div>
-
-          {/* Voortgangsbadges */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>🏆 Jouw badges</div>
-          <div style={s.card({ marginBottom:28 })}>
-            <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:12 }}>
-              {[
-                { emoji:"🌱", label:"Gestart", earned: true },
-                { emoji:"🔥", label:`${streak} dagen`, earned: streak >= 1 },
-                { emoji:"💪", label:"Eiwitten", earned: totalP >= 50 },
-                { emoji:"💧", label:"Hydratatie", earned: water >= 8 },
-                { emoji:"🌅", label:"Ochtend ✓", earned: mPct === 100 },
-                { emoji:"🌙", label:"Avond ✓", earned: ePct === 100 },
-                { emoji:"📸", label:"Selfie", earned: Object.keys(selfies).length >= 1 },
-                { emoji:"📚", label:"Module 1", earned: !!modDone[1] },
-              ].map((badge, i) => (
-                <div key={i} style={{ textAlign:"center", opacity: badge.earned ? 1 : 0.25 }}>
-                  <div style={{ fontSize:28, marginBottom:4, filter: badge.earned ? "none" : "grayscale(100%)" }}>{badge.emoji}</div>
-                  <div style={{ fontSize:9, color: badge.earned ? T.rose : T.muted, letterSpacing:"0.05em" }}>{badge.label}</div>
-                </div>
-              ))}
-            </div>
-            <p style={{ fontSize:11, color:T.muted, textAlign:"center", marginTop:16 }}>Verdien badges door de app dagelijks te gebruiken 🌸</p>
-          </div>
-
-          {/* Community */}
-          <div style={{ fontSize:12, color:T.rose, letterSpacing:"0.15em", textTransform:"uppercase", marginBottom:14 }}>👥 Community</div>
-          <div style={s.card({ border:`1px solid ${T.rose}20`, marginBottom:16 })}>
-            <p style={{ ...s.mu, fontSize:14, marginBottom:16 }}>Doe mee met de community van vrouwen die hetzelfde doorlopen. Deel je ervaringen, stel vragen en inspireer elkaar.</p>
-            <a href="https://wa.me/31649396207?text=Hoi%20Wendy%2C%20ik%20wil%20graag%20lid%20worden%20van%20de%20community" target="_blank" rel="noopener noreferrer" style={s.btn()}>
-              🌸 Word lid van de community
-            </a>
-          </div>
-        </div>
-      )}
 
     </div>
   );
 }
 
 // ─── HOOFDAPP ─────────────────────────────────────────────────────────────────
+
+// ─── FAQ ITEM ────────────────────────────────────────────────────────────────
+function FaqItem({ q, a }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ background:"#1A1814", border:"1px solid rgba(249,132,229,0.1)", borderRadius:14, padding:"16px 16px", marginBottom:7, cursor:"pointer" }} onClick={() => setOpen(o => !o)}>
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:10 }}>
+        <span style={{ fontSize:13, color:"#F0EBE1" }}>{q}</span>
+        <span style={{ color:"#F984E5", fontSize:18, flexShrink:0, transform:open?"rotate(45deg)":"none", transition:"transform 0.2s" }}>+</span>
+      </div>
+      {open && <p style={{ color:"rgba(240,235,225,0.55)", fontSize:13, lineHeight:1.85, marginTop:10 }}>{a}</p>}
+    </div>
+  );
+}
 
 // ─── LOGIN FORM ───────────────────────────────────────────────────────────────
 function LoginForm({ onLogin }) {
